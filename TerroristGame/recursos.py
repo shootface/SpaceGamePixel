@@ -25,7 +25,7 @@ class Recursos:
 class Nave(Recursos,Sprite):
     def __init__(self,cont_size,nombre="nave"):
         Recursos.__init__(self,nombre)
-        sprite.__init__(self)
+        Sprite.__init__(self)
         self.cont_size = cont_size
         self.image = pygame.image.load("Space/nave.png").convert()
         self.rect = self.image.get_rect()
@@ -33,7 +33,7 @@ class Nave(Recursos,Sprite):
 class Sonda(Recursos,Sprite):
     def __init__(self,cont_size,nombre="Sonda"):
         Recursos.__init__(self,nombre)
-        sprite.__init__(self)
+        Sprite.__init__(self)
         self.cont_size = cont_size
         self.image = pygame.image.load("Space/sonda.png")
         self.rect = self.image.get_rect()
@@ -41,7 +41,7 @@ class Sonda(Recursos,Sprite):
 class Robots(Recursos,Sprite):
     def __init__(self,cont_size,nombre="Robots"):
         Recursos.__init__(self,nombre)
-        sprite.__init__(self)
+        Sprite.__init__(self)
         self.cont_size = cont_size
         self.image = pygame.image.load("Space/robots.png").convert()
         self.rect = self.image.get_rect()
