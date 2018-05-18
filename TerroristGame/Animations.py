@@ -9,14 +9,14 @@ ventana = pygame.display.set_mode((1000,800))
 pygame.display.set_caption("DesertAtack")
 #Instanciacion imagenes juego
 #Fondo
-Space_imageBackground = pygame.image.load("/home/shootface/Documentos/Github/TerroristGame/Space/Space.jpg").convert()
+Space_imageBackground = pygame.image.load("Space/Space.jpg").convert()
 #Ataques
-nave_image = pygame.image.load("/home/shootface/Documentos/Github/TerroristGame/Space/nave.png").convert()
+nave_image = pygame.image.load("Space/nave.png").convert()
 nave_image.set_colorkey(BLANCO)
 #Personaje principal
-principal_image = pygame.image.load("/home/shootface/Documentos/Github/TerroristGame/Space/principal.png").convert()
+principal_image = pygame.image.load("Space/principal.png").convert()
 #Planetas
-planet1_image = pygame.image.load("/home/shootface/Documentos/Github/TerroristGame/Space/planeta1.jpg").convert()
+planet1_image = pygame.image.load("Space/planeta1.jpg").convert()
 planet1_image.set_colorkey(BLANCO)
 #Variables de control
 velocidad = 5
