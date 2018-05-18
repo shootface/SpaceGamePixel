@@ -1,5 +1,5 @@
 import pygame 
-from pygame.sprite import sprite
+from pygame.sprite import Sprite
 from pygame.locals import *
 
 class Recursos:
@@ -22,23 +22,27 @@ class Recursos:
         else:
             print("el",self.nombre,"no estaba siendo usado")
 
-class Hangar(Recursos,sprite):
-    def __init__(self,cont_size,nombre="Hangar"):
+class Nave(Recursos,Sprite):
+    def __init__(self,cont_size,nombre="nave"):
         Recursos.__init__(self,nombre)
         sprite.__init__(self)
         self.cont_size = cont_size
-        self.image = pygame.image.load("Space/hangar.png").convert()
+        self.image = pygame.image.load("Space/nave.png").convert()
         self.rect = self.image.get_rect()
-        self.rect.move_ip(cont_size[0]-100,cont_size[1]-700)
-        
-class Fabrica_de_robots(Recursos,sprite):
-    def __init__(self,cont_size,nombre="FabricadeRobots"):
+        self.rect.move_ip(cont_size[0]-100,cont_size[1]-700)     
+class Sonda(Recursos,Sprite):
+    def __init__(self,cont_size,nombre="Sonda"):
         Recursos.__init__(self,nombre)
         sprite.__init__(self)
         self.cont_size = cont_size
-        self.image = pygame.image.load("Space/factory.png")
+        self.image = pygame.image.load("Space/sonda.png")
         self.rect = self.image.get_rect()
         self.rect.move_ip(cont_size[0]-100,cont_size[1]-550)
-
-
-        
+class Robots(Recursos,Sprite):
+    def __init__(self,cont_size,nombre="Robots"):
+        Recursos.__init__(self,nombre)
+        sprite.__init__(self)
+        self.cont_size = cont_size
+        self.image = pygame.image.load("Space/robots.png").convert()
+        self.rect = self.image.get_rect()
+        self.rect.move_ip(cont_size[0]-100,cont_size[1]-400)
