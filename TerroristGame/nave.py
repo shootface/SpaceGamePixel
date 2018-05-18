@@ -8,6 +8,7 @@ class Nave(Sprite):
         Sprite.__init__(self)
         self.image = pygame.image.load("Space/nave.png").convert()
         self.rect = self.image.get_rect()
+        self.velocidad = 9
 
     def dibujar(self,ventana):
         ventana.blit(self.image,self.rect)
@@ -18,5 +19,9 @@ class Nave(Sprite):
     
     def dibujar_Recurso(self,ventana):
         ventana.blit(self.image,(900,200))
+    
+    def trayectoria(self):
+        self.rect.y = self.rect.y - self.velocidad
+        
         
     

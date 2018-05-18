@@ -29,9 +29,8 @@ def SpaceAtack():
     naveRecurso = Nave()
     sondaRecurso = Sonda()
     robotRecurso = Robot()
-    velocidad = 8
     disparoNave = Nave()
-    disparoNave.set_rect(jugador.get_posX(),jugador.get_posY())
+    velocidad = 8
     def animarNave(jugador):
         disparoNave.dibujar(ventana)
         return
@@ -47,6 +46,7 @@ def SpaceAtack():
         naveRecurso.dibujar_Recurso(ventana)
         sondaRecurso.dibujar_Recurso(ventana)
         robotRecurso.dibujar_Recurso(ventana)
+        disparoNave.trayectoria()
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit()
@@ -57,7 +57,7 @@ def SpaceAtack():
                 elif event.key == K_RIGHT:
                     jugador.mover(jugador.get_posX()+velocidad)
                 elif event.key == K_z:
-                    t1.start()
+                    
         print pygame.mouse.get_pos()
         pygame.display.update()
 
