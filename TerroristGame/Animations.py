@@ -11,6 +11,7 @@ from Sonda import Sonda
 from robot import Robot
 
 def SpaceAtack():
+
     pygame.init()
     #Tamano de la ventana
     ventana = pygame.display.set_mode((1000,800))
