@@ -1,14 +1,15 @@
 import pygame,sys
 from pygame.locals import *
 from recursos import *
+import threading
 from principal import Principal
-#Metodos de control 
-"""def animacionInicio():
-def ataqueNave():
-    Nave_posX = Principal_posX
-    Nave_posY = Principal_posY-100
-    ventana.blit(nave_image,(Nave_posX,Nave_posY))
-"""
+from Planeta1 import Planeta1
+from planeta2 import Planeta2
+from planeta3 import Planeta3
+from nave import Nave
+from Sonda import Sonda
+from robot import Robot
+
 def SpaceAtack():
     pygame.init()
     #Tamano de la ventana
@@ -22,21 +23,41 @@ def SpaceAtack():
     NEGRO = (0, 0, 0)
     #Jugardor principal
     jugador = Principal()
+    planeta1 = Planeta1()
+    planeta2 = Planeta2()
+    planeta3 = Planeta3()
+    naveRecurso = Nave()
+    sondaRecurso = Sonda()
+    robotRecurso = Robot()
+    velocidad = 8
+    disparoNave = Nave()
+    disparoNave.set_rect(jugador.get_posX(),jugador.get_posY())
+    def animarNave(jugador):
+        disparoNave.dibujar(ventana)
+        return
+    #Hilos de ejecucion 
+    t1 = threading.Thread(name="hilo_1", target=animarNave, args=(jugador, ))
     #Ejecucion animaciones
-    while True:  
+    while True:
         ventana.blit(Space_imageBackground,(0,0))
         jugador.dibujar(ventana)
+        planeta1.dibujar(ventana)
+        planeta2.dibujar(ventana)
+        planeta3.dibujar(ventana)
+        naveRecurso.dibujar_Recurso(ventana)
+        sondaRecurso.dibujar_Recurso(ventana)
+        robotRecurso.dibujar_Recurso(ventana)
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit()
                 sys.exit()
             elif event.type == pygame.KEYDOWN:
                 if event.key == K_LEFT:
-                    movimiento()
+                    jugador.mover(jugador.get_posX()-velocidad)
                 elif event.key == K_RIGHT:
-                    movimiento(even)
+                    jugador.mover(jugador.get_posX()+velocidad)
                 elif event.key == K_z:
-                    ataqueNave()
+                    t1.start()
         print pygame.mouse.get_pos()
         pygame.display.update()
 
