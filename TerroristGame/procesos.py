@@ -42,7 +42,7 @@ class espiar(Sprite,Proceso):
         Sprite.__init__(self)
         self.cont_size = cont_size
 class reciclar(Sprite,Proceso):
-    def __init__(self,idProceso,recurso,cont_size,quantum=0,nombre="ataque planeta",t=18,tr=0):
+    def __init__(self,idProceso,recurso,cont_size,quantum=0,nombre="reciclar escombros",t=30,tr=0):
         Proceso.__init__(self,idProceso,quantum,nombre,recurso,t,tr)
         Sprite.__init__(self)
         self.cont_size = cont_size
