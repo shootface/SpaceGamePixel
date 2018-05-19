@@ -10,8 +10,33 @@ from nave import Nave
 from Sonda import Sonda
 from robot import Robot
 
-def SpaceAtack():
+listaDisparos = []
+listaSondas = []
+listaRobots = []
 
+def dispararNave(posX , posY):
+    disparoNave = Nave()
+    disparoNave.rect.top = posY
+    disparoNave.rect.left = posX
+    disparoNave.disparada = True
+    listaDisparos.append(disparoNave)
+
+def  dispararSonda(posX, posY):
+    disparoSonda = Sonda()
+    disparoSonda.rect.top = posY
+    disparoSonda.rectleft = posX
+    disparoSonda.disparada = True
+    listaSondas.append(dispararSonda)
+
+def dispararRobots(posX,posY):
+    disparoRobot = Robot()
+    disparoRobot.rect.top = posY
+    disparoRobot.rect.left = posX
+    disparoRobot.disparada = True
+    listaRobots.append(disparoRobot)
+
+def SpaceAtack():
+    
     pygame.init()
     #Tamano de la ventana
     ventana = pygame.display.set_mode((1000,800))
@@ -30,13 +55,7 @@ def SpaceAtack():
     naveRecurso = Nave()
     sondaRecurso = Sonda()
     robotRecurso = Robot()
-    disparoNave = Nave()
     velocidad = 8
-    def animarNave(jugador):
-        disparoNave.dibujar(ventana)
-        return
-    #Hilos de ejecucion 
-    t1 = threading.Thread(name="hilo_1", target=animarNave, args=(jugador, ))
     #Ejecucion animaciones
     while True:
         ventana.blit(Space_imageBackground,(0,0))
@@ -47,7 +66,6 @@ def SpaceAtack():
         naveRecurso.dibujar_Recurso(ventana)
         sondaRecurso.dibujar_Recurso(ventana)
         robotRecurso.dibujar_Recurso(ventana)
-        disparoNave.trayectoria()
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit()
@@ -58,8 +76,36 @@ def SpaceAtack():
                 elif event.key == K_RIGHT:
                     jugador.mover(jugador.get_posX()+velocidad)
                 elif event.key == K_z:
-                    
-        print pygame.mouse.get_pos()
+                    x,y = jugador.rect.center
+                    dispararNave(x,y)
+                elif event.key == K_x:
+                    x,y = jugador.rect.center
+                    dispararSonda(x,y)
+                elif event.key == K_c:
+                    x,y = jugador.rect.center
+                    dispararRobots(x,y)
+        if len(listaDisparos)>0:
+            for x in listaDisparos:
+                if x.disparada:
+                    x.dibujar(ventana)
+                    x.trayectoria()
+                if x.rect.top < 100:
+                    x.disparada = False
+        if len(listaSondas)>0:
+            for x in listaSondas:
+                if x.disparada:
+                    x.dibujar(ventana)
+                    x.trayectoria()
+                if x.rect.top < 100:
+                    x.disparada = False
+        if len(listaRobots)>0:
+            for x in listaRobots:
+                if x.disparada:
+                    x.dibujar(ventana)
+                    x.trayectoria()
+                if x.rect.top < 100:
+                    x.disparada = False
+#        print pygame.mouse.get_pos()
         pygame.display.update()
 
 SpaceAtack()
