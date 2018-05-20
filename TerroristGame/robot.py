@@ -17,12 +17,6 @@ class Robot(Recursos,Sprite):
     def dibujar(self,ventana):
         ventana.blit(self.image,self.rect)
 
-    def disparar(self, posX , posY):
-        self.rect.top = posY
-        self.rect.left = posX
-        self.disparada = True
-    
-
     def trayectoria(self):
         self.rect.top = self.rect.top - self.velocidad
     

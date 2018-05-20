@@ -13,11 +13,6 @@ class Sonda(Recursos,Sprite):
         self.rect = self.image.get_rect()
         self.velocidad = 1
         self.disparada = False        
-    
-    def disparar(self, posX , posY):
-        self.rect.top = posY
-        self.rect.left = posX
-        self.disparada = True
 
     def dibujar(self,ventana):
         ventana.blit(self.image,self.rect)
