@@ -1,7 +1,3 @@
-import pygame 
-from pygame.sprite import Sprite
-from pygame.locals import *
-
 class Recursos:
     def __init__(self,nombre):
         self.nombre=nombre

@@ -25,11 +25,12 @@ def dispararNave(posX , posY):
     listaDisparos.append(disparoNave)
 
 def  dispararSonda(posX, posY):
+    print("Posicion : ", posX, " ",posY)
     disparoSonda = Sonda()
     disparoSonda.rect.top = posY
-    disparoSonda.rectleft = posX
+    disparoSonda.rect.left = posX
     disparoSonda.disparada = True
-    listaSondas.append(dispararSonda)
+    listaSondas.append(disparoSonda)
 
 def dispararRobots(posX,posY):
     disparoRobot = Robot()
