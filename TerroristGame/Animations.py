@@ -1,8 +1,8 @@
 import pygame
 import sys
 import threading
-from trayecto import Trayecto
 import Queue
+from trayecto import Trayecto
 from pygame.locals import *
 from recursos import *
 from principal import Principal
@@ -13,7 +13,7 @@ from nave import Nave
 from Sonda import Sonda
 from robot import Robot
 
-listaDisparos = []
+listaNave = []
 listaSondas = []
 listaRobots = []
 
@@ -22,7 +22,7 @@ def dispararNave(posX , posY):
     disparoNave.rect.top = posY
     disparoNave.rect.left = posX
     disparoNave.disparada = True
-    listaDisparos.append(disparoNave)
+    listaNave.append(disparoNave)
 
 def  dispararSonda(posX, posY):
     print("Posicion : ", posX, " ",posY)
@@ -61,17 +61,27 @@ class SpaceAtack():
         self.robotRecurso = Robot()
         self.velocidad = 8
 
-        self.cola1 = Queue.Queue
-        self.cola2 = Queue.Queue
-        self.cola3 = Queue.Queue
+        self.cola1 = Queue.Queue()
+        self.cola2 = Queue.Queue()
+        self.cola3 = Queue.Queue()
 
+        
         self.procesador1 = Trayecto(1, self.cola1)
-        self.procesador2 = Trayecto(1, self.cola2)
-        self.procesador3 = Trayecto(1, self.cola3)
-    #Ejecucion animaciones
+        self.procesador2 = Trayecto(2, self.cola2)
+        self.procesador3 = Trayecto(3, self.cola3)
 
     def iniciar(self):
-        self.animacionEntradas();
+        self.hiloAnimacionEntradas = threading.Thread(name="animacion entradas", target = self.animacionEntradas)
+        self.hiloAnimacionEntradas.setDaemon(True)
+
+        self.hilos = [self.procesador1, self.procesador2, self.procesador3, self.hiloAnimacionEntradas]
+        for hilo in self.hilos:
+            hilo.start()
+
+        self.cola1.join()
+        self.cola2.join()
+        self.cola3.join()
+        self.hiloAnimacionEntradas.join()
 
     def animacionEntradas(self):
         while True:
@@ -84,10 +94,15 @@ class SpaceAtack():
             self.sondaRecurso.dibujar_Recurso(self.ventana)
             self.robotRecurso.dibujar_Recurso(self.ventana)
             for event in pygame.event.get():
-                if event.type == QUIT:
+                if event.type == K_p:
                     pygame.quit()
+                    for hilo in self.hilos:
+                        hilo.exit()
                     sys.exit()
                 elif event.type == pygame.KEYDOWN:
+                    if event.key == K_p:
+                        pygame.quit()
+                        sys.exit()
                     if event.key == K_LEFT:
                         self.jugador.mover(self.jugador.get_posX()-self.velocidad)
                     elif event.key == K_RIGHT:
@@ -101,8 +116,8 @@ class SpaceAtack():
                     elif event.key == K_c:
                         x,y = self.jugador.rect.center
                         dispararRobots(x,y)
-            if len(listaDisparos)>0:
-                for x in listaDisparos:
+            if len(listaNave)>0:
+                for x in listaNave:
                     if x.disparada:
                         x.dibujar(self.ventana)
                         x.trayectoria()
