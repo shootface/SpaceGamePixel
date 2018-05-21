@@ -1,8 +1,10 @@
 import pygame
 import sys
+import threading
+from trayecto import Trayecto
+import Queue
 from pygame.locals import *
 from recursos import *
-import threading
 from principal import Principal
 from Planeta1 import Planeta1
 from planeta2 import Planeta2
@@ -57,6 +59,14 @@ class SpaceAtack():
         self.sondaRecurso = Sonda()
         self.robotRecurso = Robot()
         self.velocidad = 8
+
+        self.cola1 = Queue.Queue
+        self.cola2 = Queue.Queue
+        self.cola3 = Queue.Queue
+
+        self.procesador1 = Trayecto(1, self.cola1)
+        self.procesador2 = Trayecto(1, self.cola2)
+        self.procesador3 = Trayecto(1, self.cola3)
     #Ejecucion animaciones
 
     def iniciar(self):
