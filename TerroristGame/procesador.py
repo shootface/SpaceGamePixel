@@ -29,7 +29,7 @@ class Procesador(threading.Thread):
 		self._args = q
         #mientras haya algo por ejecutar
 		while not self.proceso==None or not q.empty() or not self.lis.es_vacia() or not self.sus.es_vacia() or not self.blo.es_vacia() or self.minIter>0:
-			time.sleep(1.5) #tiempo para cada accion en el procesador
+			time.sleep(2.5) #tiempo para cada accion en el procesador
 			self.minIter-=1
 			if not q.empty():
 				nuevo=q.get()
@@ -37,6 +37,7 @@ class Procesador(threading.Thread):
 				self.ttotal+=nuevo.t
 			if not self.lis.es_vacia() and self.proceso==None:
 				posible=self.lis.desencolar()
+				print "el tiempo del proceso desencolado es" , posible.t
 				if posible.recurso.libre:
 					self.ocupado=True
 					self.proceso=posible
@@ -116,5 +117,7 @@ class Procesador(threading.Thread):
 
 	def asignar(self,proceso):
 		self.lis.encolar(proceso)
-		proceso.quantum = self.quantum.asignarQ(proceso, self.lis, self._args)
+		quan = self.quantum.asignarQ(proceso, self.lis, self._args)
+		proceso.quantum = quan
+		#print "el t del proceso es", proceso.t ,"y el quantum es", quan
 		proceso.estado=0

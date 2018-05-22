@@ -23,6 +23,7 @@ class Quantum ():
     def asignarQ(self, proceso, colaLis, colaQ):
         self.actualizarValores(colaLis, colaQ)
         print ("se tienen" , len(self.lisProcesos1), "procesos en total")
+        #print "en asignarq el proceso tiene t=" , proceso.t
         mean = 0
         mediana = 0
 
@@ -33,19 +34,22 @@ class Quantum ():
             if len(self.lisProcesos1) % 2 == 0:
                 n = len(self.lisProcesos1)
                 # se halla la mediana
-                mediana = (
-                    self.lisProcesos1[n / 2 - 1].t + self.lisProcesos1[n / 2].t) / 2
+                mediana = (self.lisProcesos1[n / 2 - 1].t + self.lisProcesos1[n / 2].t) / 2
+                #print "en asignarq  mod 2 el proceso tiene t=" , proceso.t
             else:
                 mediana = self.lisProcesos1[len(self.lisProcesos1) / 2].t
+                #print "en asignarq el mod 1 proceso tiene t=" , proceso.t
 
-            for proceso in self.lisProcesos1:
-                mean = mean + proceso.t  # se halla la media
+            for procesos in self.lisProcesos1:
+                mean = mean + procesos.t  # se halla la media
             mean = mean / len(self.lisProcesos1)
 
             quantum = (mean + mediana)/2
-            
-            if(quantum>proceso.t):
-                quantum = quantum - proceso.t
+
+            if quantum > proceso.t :
+                quantum = int(quantum - 0.45*proceso.t)-1
+
+            #print "el quantum es ", quantum, "el tiempo del proceso es", proceso.t
 
             return quantum
         else:
