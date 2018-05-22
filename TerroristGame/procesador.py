@@ -84,7 +84,7 @@ class Procesador(threading.Thread):
 			n.sus+=1
 			if n.tr==0:
 				self.asignar(n)
-#				print("\nse saco el proceso",n,"de la cola de suspendidos y entro a la cola de listo")
+				print("\nse saco el proceso",n.nombre, n.idProceso,"de la cola de suspendidos y entro a la cola de listo")
 			else:
 				self.sus.encolar(n)
 
@@ -93,7 +93,7 @@ class Procesador(threading.Thread):
 			posible=self.blo.desencolar()
 			if posible.recurso.libre:
 				self.asignar(posible)
-#				print("\nse saco el proceso",posible," de la cola de bloqueados y entro en la cola de listos")
+				print("\nse saco el proceso",posible," de la cola de bloqueados y entro en la cola de listos")
 			else:
 				self.blo.encolar(posible)
 
@@ -114,6 +114,6 @@ class Procesador(threading.Thread):
 			self.blo.encolar(n)
 
 	def asignar(self,proceso):
-		self.quantum.asignarQ(proceso, self.lis)
+		proceso.quantum = self.quantum.asignarQ(proceso, self.lis)
 		proceso.estado=0
 		self.lis.encolar(proceso)

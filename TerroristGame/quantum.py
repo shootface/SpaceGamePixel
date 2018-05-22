@@ -35,6 +35,6 @@ class Quantum ():
             mean = mean / len(self.lisProcesos1)
 
             quantum = (mean + mediana)/2
-            proceso.quantum = quantum
+            return quantum
         else:
-            proceso.quantum = 15
+            return 15
