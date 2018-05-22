@@ -9,11 +9,11 @@ from principal import Principal
 from Planeta1 import Planeta1
 from planeta2 import Planeta2
 from planeta3 import Planeta3
-from nave import Nave
-from Sonda import Sonda
-from robot import Robot
 from asteroid import asteroid
 from procesos import *
+from pilot import pilot
+from mechanic import Mechanic
+from spy import spy
 
 listaNave = []
 listaSondas = []
@@ -36,7 +36,7 @@ class SpaceAtack():
         self.jugador = Principal()
         self.planetas = [Planeta1(),Planeta2(),Planeta3()]#Todos los planetas se crean en esta lista
         self.asteroides = [asteroid(220,700),asteroid(630,700)]#Todos los asteroides se crean en esta lista 
-        self.recursos = [Nave(),Sonda(),Robot()] #Todos los recursos se crean en una lista
+        self.recursos = [pilot(),spy(),Mechanic()] #Todos los recursos se crean en una lista
         self.velocidad = 12
 
         #Colas donde se almacenan los procesos

@@ -11,10 +11,7 @@ class Nave(Recursos,Sprite):
         self.image.set_colorkey((0,0,0))
         self.velocidad = 1
         self.disparada = False
-    
-    def dibujar_Recurso(self,ventana):
-        ventana.blit(self.image,(900,200))
-    
+        
     def trayectoria(self):
         self.rect.top = self.rect.top - self.velocidad
 

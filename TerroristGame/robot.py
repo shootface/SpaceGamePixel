@@ -19,6 +19,3 @@ class Robot(Recursos,Sprite):
 
     def trayectoria(self):
         self.rect.top = self.rect.top - self.velocidad
-    
-    def dibujar_Recurso(self,ventana):
-        ventana.blit(self.image,(900,450))
