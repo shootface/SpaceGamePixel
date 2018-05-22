@@ -8,7 +8,7 @@ class Nave(Sprite):
         self.image = pygame.image.load("Space/nave.png").convert()
         self.rect = self.image.get_rect()
         self.image.set_colorkey((0,0,0))
-        self.velocidad = 10
+        self.velocidad = 100
         self.disparada = False
         
     def trayectoria(self):    
@@ -23,7 +23,3 @@ class Nave(Sprite):
 
     def dibujar(self, ventana):
         ventana.blit(self.image,self.rect)
-
-    def bloqueado(self):
-        self.rect.top = 65
-        self.rect.left = 80

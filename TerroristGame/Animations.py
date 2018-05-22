@@ -113,77 +113,19 @@ class SpaceAtack():
                     elif event.key == K_c:
                         x,y = self.jugador.rect.center
                         self.dispararRobots(x,y)
-            """if len(listaNave)>0:
+            if len(listaNave)>0:
                 #print("Tanano lista :",len(listaNave))
                 for x in listaNave:
-                    #print("Numero de proceso :",x.idProceso," ",x.estado)
-                    if x.estado==3:
-                        if self.estadoAnterior==1:
-                            #print("Etuve bloqueado")
-                            x.disparoNave.back()
-                            self.estadoAnterior = 5
-                        if x.disparoNave.disparada:
-                            #print("En ejecucion")
-                            #time.sleep(1) #tiempo para cada accion en el procesador
-                            x.disparoNave.dibujar(self.ventana)
-                            x.disparoNave.trayectoria()
-                    if x.estado==1:
-                        #print("Bloqueado")
-                        self.estadoAnterior = 1
-                        if x.disparoNave.disparada:
-                            x.ataqueBloqueado()
-                            x.disparoNave.dibujar(self.ventana)
-                    if x.estado==2:
-                        #print("Suspendido")
-                        if x.disparoNave.disparada:
-                            x.ataqueSuspendido()
-                            x.disparoNave.dibujar(self.ventana)
+                    if x.disparo.disparada:
+                        x.disparo.dibujar(self.ventana)
             if len(listaSondas)>0:
                 for x in listaSondas:
-                    if x.estado==3:
-                        if self.estadoAnteriorSonda==1:
-                            #print("Etuve bloqueado")
-                            x.disparoSonda.back()
-                            self.estadoAnterior = 5
-                        if x.disparoSonda.disparada:
-                            #print("En ejecucion")
-                            #time.sleep(1) #tiempo para cada accion en el procesador
-                            x.disparoSonda.dibujar(self.ventana)
-                            x.disparoSonda.trayectoria()
-                    if x.estado==1:
-                        #print("Bloqueado")
-                        self.estadoAnterior = 1
-                        if x.disparoSonda.disparada:
-                            x.espiarBloqueado()
-                            x.disparoSonda.dibujar(self.ventana)
-                    if x.estado==2:
-                        #print("Suspendido")
-                        if x.disparoSonda.disparada:
-                            x.espiasSuspendido()
-                            x.disparoSonda.dibujar(self.ventana)
+                    if x.disparo.disparada:
+                        x.disparo.dibujar(self.ventana)
             if len(listaRobots)>0:
                 for x in listaRobots:
-                    if x.estado==3:
-                        if self.estadoAnteriorRobot==1:
-                            #print("Etuve bloqueado")
-                            x.disparoRobot.back()
-                            self.estadoAnterior = 5
-                        if x.disparoRobot.disparada:
-                            #print("En ejecucion")
-                            #time.sleep(1) #tiempo para cada accion en el procesador
-                            x.disparoRobot.dibujar(self.ventana)
-                            x.disparoRobot.trayectoria()
-                    if x.estado==1:
-                        #print("Bloqueado")
-                        self.estadoAnterior = 1
-                        if x.disparoRobot.disparada:
-                            x.reciclarBloqueado()
-                            x.disparoRobot.dibujar(self.ventana)
-                    if x.estado==2:
-                        #print("Suspendido")
-                        if x.disparoSonda.disparada:
-                            x.reciclarSuspendido()
-                            x.disparoRobot.dibujar(self.ventana)"""
+                    if x.disparo.disparada:
+                        x.disparo.dibujar(self.ventana)
             #print pygame.mouse.get_pos()
             pygame.display.update()
 
@@ -205,7 +147,7 @@ class SpaceAtack():
         listaNave.append(proceso)
 
     def  dispararSonda(self,posX, posY):
-        proceso = espiar(self.numeroEspiar,self.recursos[1],posX,posY,self.ventana)
+        proceso = espiar(self.numeroEspiar,self.recursos[1],posX,self.ventana,posY)
         self.numeroEspiar +=1
         if posX<=220:
             self.cola1.put(proceso)
@@ -222,7 +164,7 @@ class SpaceAtack():
         listaSondas.append(proceso)
 
     def dispararRobots(self,posX,posY):
-        proceso = reciclar(self.numeroReciclar,self.recursos[2],posX,posY)
+        proceso = reciclar(self.numeroReciclar,self.recursos[2],posX,self.ventana,posY)
         if posX<=220:
             self.cola1.put(proceso)
             estado = "Reciclar el planeta 1"
