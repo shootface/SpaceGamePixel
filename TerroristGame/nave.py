@@ -8,7 +8,7 @@ class Nave(Sprite):
         self.image = pygame.image.load("Space/nave.png").convert()
         self.rect = self.image.get_rect()
         self.image.set_colorkey((0,0,0))
-        self.velocidad = .2
+        self.velocidad = 0.2
         self.disparada = False
         
     def trayectoria(self):    

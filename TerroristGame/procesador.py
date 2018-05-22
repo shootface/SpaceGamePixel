@@ -1,6 +1,7 @@
 import threading
 import colas as cola
 import time
+from quantum import Quantum
 
 class Procesador(threading.Thread):
 	def __init__(self,idProcesador,*args):
@@ -15,6 +16,7 @@ class Procesador(threading.Thread):
 		self.uso=True
 		self.ttotal=0
 		self.minIter=50
+		self.quantum = Quantum()
 
 	def __str__(self):
 		return str(self.idProcesador)
@@ -26,11 +28,11 @@ class Procesador(threading.Thread):
 	def usarProcesador(self,q):
         #mientras haya algo por ejecutar
 		while not self.proceso==None or not q.empty() or not self.lis.es_vacia() or not self.sus.es_vacia() or not self.blo.es_vacia() or self.minIter>0:
-			time.sleep(0.5) #tiempo para cada accion en el procesador
+			time.sleep(3) #tiempo para cada accion en el procesador
 			self.minIter-=1
 			if not q.empty():
 				nuevo=q.get()
-				#self.asignar(nuevo)
+				self.asignar(nuevo)
 				self.ttotal+=nuevo.t
 			if not self.lis.es_vacia() and self.proceso==None:
 				posible=self.lis.desencolar()
@@ -39,9 +41,9 @@ class Procesador(threading.Thread):
 					self.proceso=posible
 					self.proceso.recurso.libre=False
 					self.proceso.estado=3
-#					print("\ncomenzando proceso",self.proceso,"en el procesador",self)
+					print("\ncomenzando proceso",self.proceso,"en el procesador",self)
 				else:
-#					print("\nel proceso",posible,"requiere de un recurso ocupado, encolando en bloqueado")
+					print("\nel proceso",posible.nombre,"requiere de un recurso ocupado, encolando en bloqueado")
 					self.blo.encolar(posible)
 					posible.estado=1
 
@@ -52,18 +54,18 @@ class Procesador(threading.Thread):
 
 			if not self.proceso==None: #si hay un proceso en el procesador se procesa
 				self.proceso.procesar()
-				print("procesador",self,"con",self.proceso)
+				print("procesador",self.idProcesador,"con",self.proceso.nombre)
 				self.ttotal-=1
 				if self.proceso.t>0 and self.proceso.quantum==0: #si el proceso no ha terminado y se ha agotado el quantum
 					self.proceso.tr=5
 					self.proceso.recurso.libre=True
 					self.sus.encolar(self.proceso)
 					self.proceso.estado=2
-#					print("\nse reencolo el proceso",self.proceso,"a suspendidos")
+					print("\nse reencolo el proceso",self.proceso,"a suspendidos")
 					self.proceso=None
 				elif self.proceso.t==0: #si el proceso ya termino se despacha
 					self.proceso.recurso.libre=True
-#					print("\nterminando proceso",self.proceso,"en el procesador",self,",sus",self.proceso.sus,",lis",self.proceso.lis,",blo",self.proceso.blo,",zona critica",self.proceso.zc)
+					print("\nterminando proceso",self.proceso,"en el procesador",self,",sus",self.proceso.sus,",lis",self.proceso.lis,",blo",self.proceso.blo,",zona critica",self.proceso.zc)
 					self.ter.encolar(self.proceso)
 					self.proceso.estado=4
 					self.proceso=None
@@ -112,6 +114,6 @@ class Procesador(threading.Thread):
 			self.blo.encolar(n)
 
 	def asignar(self,proceso):
-		proceso.quantum=proceso.asignarQ(self.ttotal)
+		self.quantum.asignarQ(proceso, self.lis)
 		proceso.estado=0
 		self.lis.encolar(proceso)

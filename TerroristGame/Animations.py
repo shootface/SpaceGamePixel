@@ -59,7 +59,7 @@ class SpaceAtack():
         self.numeroEspiar = 0
         self.numeroReciclar = 0
 
-        #Variables que almacenan cada proceso que se crea demanera temporal
+        #objeto quantum
 
     def iniciar(self):
         self.hiloAnimacionEntradas = threading.Thread(name="animacion entradas", target = self.animacionEntradas)
@@ -139,77 +139,19 @@ class SpaceAtack():
             #print pygame.mouse.get_pos()
             pygame.display.update()
     
-    def asignarQ(self, proceso, procesador):
-        mean = 0
-        mediana = 0
-        if procesador == 1 and len(self.lisProcesos1) != 0:
-            self.lisProcesos1.sort(key=lambda proceso: proceso.t) #se ordena por tiempo de ejecucion los procesos
-
-            if len(self.lisProcesos1) % 2 == 0: 
-                n = len(self.lisProcesos1)
-                mediana = (self.lisProcesos1[n / 2 - 1].t + self.lisProcesos1[n / 2].t) / 2     #se halla la mediana
-            else:
-                mediana = self.lisProcesos1[len(self.lisProcesos1) / 2].t
-
-            for proceso in self.lisProcesos1:
-                mean = mean + proceso.t             #se halla la media
-            mean = mean/ len(self.lisProcesos1)
-            
-            quantum = (mean + mediana)/2
-            return quantum
-        elif procesador == 2 and len(self.lisProcesos2) != 0:
-            self.lisProcesos2.sort(key=lambda proceso: proceso.t)
-
-            if len(self.lisProcesos2) % 2 == 0: 
-                n = len(self.lisProcesos2)
-                mediana = (self.lisProcesos2[n / 2 - 1].t + self.lisProcesos2[n / 2].t) / 2     #se haya la mediana
-            else:
-                mediana = self.lisProcesos2[len(self.lisProcesos2) / 2].t
-
-            
-            for proceso in self.lisProcesos2:
-                mean = mean + proceso.t
-            mean = mean/ len(self.lisProcesos2)
-
-            quantum = (mean + mediana)/2
-            return quantum 
-        elif procesador == 3 and len(self.lisProcesos3) != 0:
-            self.lisProcesos3.sort(key=lambda proceso: proceso.t)
-            
-            if len(self.lisProcesos3) % 2 == 0: 
-                n = len(self.lisProcesos3)
-                mediana = (self.lisProcesos3[n / 2 - 1].t + self.lisProcesos3[n / 2].t) / 2     #se haya la mediana
-            else:
-                mediana = self.lisProcesos3[len(self.lisProcesos3) / 2].t
-
-            for proceso in self.lisProcesos3:
-                mean = mean + proceso.t
-            mean = mean/ len(self.lisProcesos3)
-
-            quantum = (mean + mediana)/2
-            return quantum
-        else:
-             return 15
 
     def dispararNave(self,posX , posY):
         proceso = ataque(self.numeroAtaque,self.recursos[0],posX,posY)
         self.numeroAtaque +=1
         if posX<=220:
-            self.lisProcesos1 = list(self.cola1.queue)
-            proceso.quantum = self.asignarQ(proceso, 1)
-            print  proceso.quantum
             self.cola1.put(proceso)
             estado = "Atacando el planeta 1"
             self.procesador1.estado = estado
         elif posX>220 and posX <= 630:
-            self.lisProcesos2 = list(self.cola2.queue)
-            proceso.quantum = self.asignarQ(proceso, 2)
             self.cola2.put(proceso)
             estado = "Atacando el planeta 2"
             self.procesador2.estado = estado
         elif posX > 630:
-            self.lisProcesos3 = list(self.cola3.queue)
-            proceso.quantum = self.asignarQ(proceso, 3)
             self.cola3.put(proceso)
             estado = "Atacando el planeta 3"
             self.procesador3.estado = estado
@@ -219,20 +161,14 @@ class SpaceAtack():
         proceso = espiar(self.numeroEspiar,self.recursos[1],posX,posY)
         self.numeroEspiar +=1
         if posX<=220:
-            self.lisProcesos1 = list(self.cola1.queue)
-            proceso.quantum = self.asignarQ(proceso, 1)
             self.cola1.put(proceso)
             estado = "Espiando el planeta 1"
             self.procesador1.estado = estado
         elif posX>220 and posX <= 630:
-            self.lisProcesos2 = list(self.cola2.queue)
-            proceso.quantum = self.asignarQ(proceso, 2)
             self.cola2.put(proceso)
             estado = "Espiando el planeta 2"
             self.procesador2.estado = estado
         elif posX > 630:
-            self.lisProcesos3 = list(self.cola3.queue)
-            proceso.quantum = self.asignarQ(proceso, 3)
             self.cola3.put(proceso)
             estado = "Espiando el planeta 3"
             self.procesador3.estado = estado
@@ -241,20 +177,14 @@ class SpaceAtack():
     def dispararRobots(self,posX,posY):
         proceso = reciclar(self.numeroReciclar,self.recursos[2],posX,posY)
         if posX<=220:
-            self.lisProcesos1 = list(self.cola1.queue)
-            proceso.quantum = self.asignarQ(proceso, 1)
             self.cola1.put(proceso)
             estado = "Reciclar el planeta 1"
             self.procesador1.estado = estado
         elif posX>220 and posX <= 630:
-            self.lisProcesos2 = list(self.cola2.queue)
-            proceso.quantum = self.asignarQ(proceso, 2)
             self.cola2.put(proceso)
             estado = "Reciclar el planeta 2"
             self.procesador2.estado = estado
         elif posX > 630:
-            self.lisProcesos3 = list(self.cola3.queue)
-            proceso.quantum = self.asignarQ(proceso, 3)
             self.cola3.put(proceso)
             estado = "Reciclar el planeta 3"
             self.procesador3.estado = estado

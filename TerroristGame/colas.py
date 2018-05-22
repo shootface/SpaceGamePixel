@@ -11,7 +11,7 @@ class Cola:
         self.cola=None
         self.tam=0
 
-    def insertar(self, x):
+    def encolar(self, x):
         nuevo=Nodo(x)
         if self.cabeza==None:
             self.cabeza=nuevo
@@ -24,7 +24,7 @@ class Cola:
         return True
         
     
-    def eliminar(self,n=0):
+    def desencolar(self,n=0):
         x=None
         if self.cabeza==None:
             print("no hay elementos")
