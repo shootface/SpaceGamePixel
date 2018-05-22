@@ -1,8 +1,9 @@
 import pygame
 from pygame.sprite import Sprite
 from pygame.locals import *
+from recursos import Recursos
 
-class Mechanic(Sprite):
+class Mechanic(Recursos,Sprite):
 
     def __init__(self,nombre="Mecanico"):
         Sprite.__init__(self)

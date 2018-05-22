@@ -34,6 +34,7 @@ class Proceso:
         return 1
     
 class ataque(Sprite,Proceso):
+    
     def __init__(self,idProceso,recurso,posX , posY,quantum=0,nombre="ataque planeta",t=18,tr=0):
         Proceso.__init__(self,idProceso,quantum,nombre,recurso,t,tr)
         Sprite.__init__(self)
@@ -42,7 +43,12 @@ class ataque(Sprite,Proceso):
         self.disparoNave.rect.left = posX
         self.disparoNave.disparada = True
 
+    def ataqueSuspendido(self):
+        self.disparoNave.rect.top = 65
+        self.disparoNave.rect.left = 80
+
 class espiar(Sprite,Proceso):
+    
     def __init__(self,idProceso,recurso,posX , posY,quantum=0,nombre="Espiar",t=10,tr=0):
         Proceso.__init__(self,idProceso,quantum,nombre,recurso,t,tr)
         Sprite.__init__(self)
@@ -52,6 +58,7 @@ class espiar(Sprite,Proceso):
         self.disparoSonda.disparada = True
 
 class reciclar(Sprite,Proceso):
+    
     def __init__(self,idProceso,recurso,posX , posY,quantum=0,nombre="reciclar escombros",t=30,tr=0):
         Proceso.__init__(self,idProceso,quantum,nombre,recurso,t,tr)
         Sprite.__init__(self)

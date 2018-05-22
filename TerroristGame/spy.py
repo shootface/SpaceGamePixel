@@ -1,8 +1,9 @@
 import pygame
 from pygame.sprite import Sprite
 from pygame.locals import *
+from recursos import Recursos
 
-class spy(Sprite):
+class spy(Recursos,Sprite):
 
     def __init__(self,nombre = "Espia"):
         BLANCO = (255, 255, 255)
