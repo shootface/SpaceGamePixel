@@ -11,7 +11,7 @@ class Robot(Recursos,Sprite):
         self.image = pygame.image.load("Space/robot.png").convert()
         self.image.set_colorkey(BLANCO)
         self.rect = self.image.get_rect()
-        self.velocidad = 100
+        self.velocidad = 59
         self.disparada = False   
 
     def dibujar(self,ventana):

@@ -6,6 +6,7 @@ class Nave(Sprite):
     def __init__(self,nombre="nave"):
         Sprite.__init__(self)
         self.image = pygame.image.load("Space/nave.png").convert()
+        self.imageFreez = pygame.image.load("Space/navefrezz.png").convert()
         self.rect = self.image.get_rect()
         self.image.set_colorkey((0,0,0))
         self.velocidad = 100
@@ -23,3 +24,6 @@ class Nave(Sprite):
 
     def dibujar(self, ventana):
         ventana.blit(self.image,self.rect)
+
+    def dibujarFreez(self,ventana):
+        ventana.blit(self.imageFreez,self.rect)

@@ -61,10 +61,6 @@ class SpaceAtack():
         self.numeroReciclar = 0
 
         #objeto quantum
-        self.estadoAnterior=5 #Se define una variable estado anterior para almacenar el valor del estado inmediatemenete anterior y se utiliza el valor
-        self.estadoAnteriorSonda = 5#de 5 ya que no es un valor valido dentro de la clase procesos 
-        self.estadoAnteriorRobot = 5
-
     def iniciar(self):
         self.hiloAnimacionEntradas = threading.Thread(name="animacion entradas", target = self.animacionEntradas)
         self.hiloAnimacionEntradas.setDaemon(True)

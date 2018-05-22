@@ -33,7 +33,7 @@ class Proceso:
         if self.estado == 1:
             self.disparo.dibujar(self.ventana)
         if self.estado == 2:
-            self.disparo.dibujar(self.ventana)
+            self.disparo.dibujarFreez(self.ventana)
         print("Preparando",self.nombre,self.idProceso,"quantum",self.quantum,"t",self.t,"recurso",self.recurso)
 
 class ataque(Sprite,Proceso):
