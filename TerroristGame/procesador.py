@@ -1,5 +1,6 @@
 import threading
-import cola
+import colas as cola
+import time
 
 class Procesador(threading.Thread):
 	def __init__(self,idProcesador,*args):
