@@ -25,7 +25,8 @@ class Quantum ():
         print ("se tienen" , len(self.lisProcesos1), "procesos en total")
         mean = 0
         mediana = 0
-        if len(self.lisProcesos1) != 0:
+
+        if len(self.lisProcesos1) > 1:
             # se ordena por tiempo de ejecucion los procesos
             self.lisProcesos1.sort(key=lambda proceso: proceso.t)
 
@@ -48,4 +49,4 @@ class Quantum ():
 
             return quantum
         else:
-            return 15
+            return proceso.t
