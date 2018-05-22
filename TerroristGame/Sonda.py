@@ -11,7 +11,7 @@ class Sonda(Recursos,Sprite):
         self.image = pygame.image.load("Space/sonda.png").convert()
         self.image.set_colorkey(BLANCO)
         self.rect = self.image.get_rect()
-        self.velocidad = 1
+        self.velocidad = 100
         self.disparada = False        
 
     def dibujar(self,ventana):
@@ -21,7 +21,3 @@ class Sonda(Recursos,Sprite):
         self.rect.top = self.rect.top - self.velocidad
         if self.rect.top < 100:
             self.disparada = False
-
-    def back(self):
-        self.rect.top = 719
-        print("BACK-----------------------------------------------------------------------------------")

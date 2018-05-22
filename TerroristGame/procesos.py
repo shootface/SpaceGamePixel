@@ -29,12 +29,8 @@ class Proceso:
         self.t-=1
         self.zc+=1
         if self.estado == 3:
-            print("HOLA")
-            self.disparo.dibujar(self.ventana)
             self.disparo.trayectoria()
-            pygame.display.update()
         if self.estado == 1:
-            self.disparo.bloqueado()
             self.disparo.dibujar(self.ventana)
         if self.estado == 2:
             self.disparo.dibujar(self.ventana)
@@ -52,35 +48,20 @@ class ataque(Sprite,Proceso):
 
 class espiar(Sprite,Proceso):
     
-    def __init__(self,idProceso,recurso,posX , posY,quantum=0,nombre="Espiar",t=5,tr=0):
-        Proceso.__init__(self,idProceso,quantum,nombre,recurso,t,tr)
+    def __init__(self,idProceso,recurso,posX ,ventana, posY,quantum=0,nombre="Espiar",t=5,tr=0):
+        Proceso.__init__(self,idProceso,quantum,nombre,recurso,t,tr,ventana)
         Sprite.__init__(self)
         self.disparo = Sonda()
         self.disparo.rect.top = posY
         self.disparo.rect.left = posX
         self.disparo.disparada = True
-    
-    def espiarBloqueado(self):
-        self.disparo.rect.top = 260
-        self.disparo.rect.top = 80
-    
-    def espiasSuspendido(self):
-        self.disparoSonda.rect.top = self.disparoSonda.rect.top
 
 class reciclar(Sprite,Proceso):
     
-    def __init__(self,idProceso,recurso,posX , posY,quantum=0,nombre="reciclar escombros",t=12,tr=0):
-        Proceso.__init__(self,idProceso,quantum,nombre,recurso,t,tr)
+    def __init__(self,idProceso,recurso,posX ,ventana, posY,quantum=0,nombre="reciclar escombros",t=12,tr=0):
+        Proceso.__init__(self,idProceso,quantum,nombre,recurso,t,tr,ventana)
         Sprite.__init__(self)
-        self.disparoRobot = Robot()
-        self.disparoRobot.rect.top = posY
-        self.disparoRobot.rect.left = posX
-        self.disparoRobot.disparada = True
-    
-    def reciclarBloqueado(self):
-        self.disparoRobot.rect.top = 630
-        self.disparoRobot.rect.top = 80
-    
-    def reciclarSuspendido(self):
-        self.disparoRobot.rect.top = self.disparoRobot.rect.top
-
+        self.disparo = Robot()
+        self.disparo.rect.top = posY
+        self.disparo.rect.left = posX
+        self.disparo.disparada = True
