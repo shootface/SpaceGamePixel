@@ -23,7 +23,6 @@ def dispararNave(posX , posY):
     listaDisparos.append(disparoNave)
 
 def  dispararSonda(posX, posY):
-    print("Posicion : ", posX, " ",posY)
     disparoSonda = Sonda()
     disparoSonda.rect.top = posY
     disparoSonda.rect.left = posX
@@ -51,12 +50,8 @@ class SpaceAtack():
         self.NEGRO = (0, 0, 0)
         #Jugardor principal
         self.jugador = Principal()
-        self.planeta1 = Planeta1()
-        self.planeta2 = Planeta2()
-        self.planeta3 = Planeta3()
-        self.naveRecurso = Nave()
-        self.sondaRecurso = Sonda()
-        self.robotRecurso = Robot()
+        self.planetas = [Planeta1(),Planeta2(),Planeta3()]
+        self.recursos = [Nave(),Sonda(),Robot()] #Todos los recursos se crean en una lista
         self.velocidad = 8
     #Ejecucion animaciones
 
@@ -67,12 +62,11 @@ class SpaceAtack():
         while True:
             self.ventana.blit(self.Space_imageBackground,(0,0))
             self.jugador.dibujar(self.ventana)
-            self.planeta1.dibujar(self.ventana)
-            self.planeta2.dibujar(self.ventana)
-            self.planeta3.dibujar(self.ventana)
-            self.naveRecurso.dibujar_Recurso(self.ventana)
-            self.sondaRecurso.dibujar_Recurso(self.ventana)
-            self.robotRecurso.dibujar_Recurso(self.ventana)
+            for r in self.recursos:
+                r.dibujar_Recurso(self.ventana) #Se recorre la lista para dibuajr los recursos en el lateral de la ventana
+            for p in self.planetas:
+                p.dibujar(self.ventana)
+
             for event in pygame.event.get():
                 if event.type == QUIT:
                     pygame.quit()
@@ -112,7 +106,7 @@ class SpaceAtack():
                         x.trayectoria()
                     if x.rect.top < 100:
                         x.disparada = False
-    #        print pygame.mouse.get_pos()
+            print pygame.mouse.get_pos()
             pygame.display.update()
 
 cliente = SpaceAtack()
