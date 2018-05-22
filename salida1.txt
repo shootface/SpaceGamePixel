@@ -1,0 +1,2490 @@
+ shootface@shootface-Nitro  ~  cd Documentos/Github/SpaceGamePixel/TerroristGame 
+ shootface@shootface-Nitro  ~/Documentos/Github/SpaceGamePixel/TerroristGame   master ± python Animations.py 
+('posicion', 480)
+('\ncomenzando proceso'En ejecucion
+, <ataque sprite(in 0 groups)>, 'en el procesador', <Trayecto(Thread-1, started 140529842820864)>)
+('Preparando', 'ataque planeta', 0, 'quantum', 14, 't', 7, 'recurso', <pilot sprite(in 0 groups)>)
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+('Preparando', 'ataque planeta', 0, 'quantum', 13, 't', 6, 'recurso', <pilot sprite(in 0 groups)>)
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+('Preparando', 'ataque planeta', 0, 'quantum', 12, 't', 5, 'recurso', <pilot sprite(in 0 groups)>)
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+('\nel proceso', 'ataque planeta', 'requiere de un recurso ocupado, encolando en bloqueado')
+En ejecucion
+Bloqueado
+En ejecucion
+Bloqueado
+En ejecucion
+Bloqueado
+En ejecucion
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+ ('Preparando', 'ataque planeta', 0, 'quantum', 11, 't', 4, 'recurso', <pilot sprite(in 0 groups)>)
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+ (Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+'Preparando', 'ataque planeta', 0, 'quantum', 10, 't', 3, 'recurso', <pilot sprite(in 0 groups)>)
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+ ('Preparando', 'ataque planeta', 0, 'quantum', 9, 't', 2, 'recurso', Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+<pilot sprite(in 0 groups)>)
+ Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado('Preparando', 
+'ataque planeta', 0, 'quantum'Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+, 8, 't', 1, 'recurso', <pilot sprite(in 0 groups)>)
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+ ('Preparando', 'ataque planeta', 0, 'quantum', 7, 't', 0, 'recurso', <pilot sprite(in 0 groups)>)
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+Bloqueado
+('\ncomenzando proceso'En ejecucion
+, <ataque sprite(in 0 groups)>, 'en el procesador', <Trayecto(Thread-2, started 140529834428160)>)
+('Preparando', 'ataque planeta', 1, 'quantum', 14, 't', 7, 'recurso', <pilot sprite(in 0 groups)>)
+('Preparando', 'ataque planeta', 1, 'quantum', 13, 't', 6, 'recurso', <pilot sprite(in 0 groups)>)
+('Preparando', 'ataque planeta', 1, 'quantum', 12, 't', 5, 'recurso', <pilot sprite(in 0 groups)>)
+('Preparando', 'ataque planeta', 1, 'quantum', 11, 't', 4, 'recurso', <pilot sprite(in 0 groups)>)
+('Preparando', 'ataque planeta', 1, 'quantum', 10, 't', 3, 'recurso', <pilot sprite(in 0 groups)>)
+('Preparando', 'ataque planeta', 1, 'quantum', 9, 't', 2, 'recurso', <pilot sprite(in 0 groups)>)
+('Preparando', 'ataque planeta', 1, 'quantum', 8, 't', 1, 'recurso', <pilot sprite(in 0 groups)>)
+('Preparando', 'ataque planeta', 1, 'quantum', 7, 't', 0, 'recurso', <pilot sprite(in 0 groups)>)
+('\ncomenzando proceso', <ataque sprite(in 0 groups)>, 'en el procesador', <Trayecto(Thread-2, started 140529834428160)>)
+('Preparando', 'ataque planeta', 2, 'quantum', -1, 't', 7, 'recurso', <pilot sprite(in 0 groups)>)
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+ ('Preparando', 'ataque planeta'En ejecucion
+, En ejecucion
+2, 'quantum', -2, 't', 6, 'recurso', <pilot sprite(in 0 groups)>)
+En ejecucion
+('Preparando', 'ataque planeta', 2, 'quantum', -3, 't', 5, 'recurso', <pilot sprite(in 0 groups)>)
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+En ejecucion
+('Preparando', 'ataque planeta', 2, 'quantum', -4, 't', 4, 'recurso', <pilot sprite(in 0 groups)>)
+('Preparando', 'ataque planeta', 2, 'quantum', -5, 't', 3, 'recurso', <pilot sprite(in 0 groups)>)
+('Preparando', 'ataque planeta', 2, 'quantum', -6, 't', 2, 'recurso', <pilot sprite(in 0 groups)>)
+('Preparando', 'ataque planeta', 2, 'quantum', -7, 't', 1, 'recurso', <pilot sprite(in 0 groups)>)
+('Preparando', 'ataque planeta', 2, 'quantum', -8, 't', 0, 'recurso', <pilot sprite(in 0 groups)>)
+('termino el procesador', <Trayecto(Thread-2, started 140529834428160)>, 'lista de tareas completadas en este procesador:')
+<ataque sprite(in 0 groups)>
+<ataque sprite(in 0 groups)>
+('termino el procesador', <Trayecto(Thread-1, started 140529842820864)>, 'lista de tareas completadas en este procesador:')
+<ataque sprite(in 0 groups)>
+('termino el procesador', <Trayecto(Thread-3, started 140529826035456)>, 'lista de tareas completadas en este procesador:')
+  
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    

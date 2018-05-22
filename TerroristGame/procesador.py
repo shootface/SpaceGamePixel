@@ -28,7 +28,7 @@ class Procesador(threading.Thread):
 	def usarProcesador(self,q):
         #mientras haya algo por ejecutar
 		while not self.proceso==None or not q.empty() or not self.lis.es_vacia() or not self.sus.es_vacia() or not self.blo.es_vacia() or self.minIter>0:
-			time.sleep(3) #tiempo para cada accion en el procesador
+			time.sleep(1) #tiempo para cada accion en el procesador
 			self.minIter-=1
 			if not q.empty():
 				nuevo=q.get()
@@ -54,18 +54,18 @@ class Procesador(threading.Thread):
 
 			if not self.proceso==None: #si hay un proceso en el procesador se procesa
 				self.proceso.procesar()
-				print("procesador",self.idProcesador,"con",self.proceso.nombre)
+				#print("procesador",self.idProcesador,"con",self.proceso.nombre)
 				self.ttotal-=1
 				if self.proceso.t>0 and self.proceso.quantum==0: #si el proceso no ha terminado y se ha agotado el quantum
 					self.proceso.tr=5
 					self.proceso.recurso.libre=True
 					self.sus.encolar(self.proceso)
 					self.proceso.estado=2
-					print("\nse reencolo el proceso",self.proceso,"a suspendidos")
+					#print("\nse reencolo el proceso",self.proceso,"a suspendidos")
 					self.proceso=None
 				elif self.proceso.t==0: #si el proceso ya termino se despacha
 					self.proceso.recurso.libre=True
-					print("\nterminando proceso",self.proceso,"en el procesador",self,",sus",self.proceso.sus,",lis",self.proceso.lis,",blo",self.proceso.blo,",zona critica",self.proceso.zc)
+					#print("\nterminando proceso",self.proceso,"en el procesador",self,",sus",self.proceso.sus,",lis",self.proceso.lis,",blo",self.proceso.blo,",zona critica",self.proceso.zc)
 					self.ter.encolar(self.proceso)
 					self.proceso.estado=4
 					self.proceso=None
