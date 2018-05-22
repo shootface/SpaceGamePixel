@@ -2,6 +2,7 @@ import pygame
 import sys
 import threading
 import Queue
+import time
 from trayecto import Trayecto
 from pygame.locals import *
 from recursos import *
@@ -108,17 +109,17 @@ class SpaceAtack():
                         x,y = self.jugador.rect.center
                         self.dispararRobots(x,y)
             if len(listaNave)>0:
-                print("Tanano lista :",len(listaNave))
+                #print("Tanano lista :",len(listaNave))
                 for x in listaNave:
-                    print("Numero de proceso :",x.idProceso)
+                    #print("Numero de proceso :",x.idProceso)
                     if x.estado==0:
                         if x.disparoNave.disparada:
-                            print("Estado 0 ")
+                            #print("Estado 0 ")
                             x.disparoNave.dibujar(self.ventana)
                             x.disparoNave.trayectoria()
                     if x.estado==1:
                         if x.disparoNave.disparada:
-                            print("Estado 1")
+                            #print("Estado 1")
                             x.ataqueSuspendido()
                             x.disparoNave.dibujar(self.ventana)
             if len(listaSondas)>0:
@@ -196,6 +197,7 @@ class SpaceAtack():
         if posX<=220:
             self.lisProcesos1 = list(self.cola1.queue)
             proceso.quantum = self.asignarQ(proceso, 1)
+            print  proceso.quantum
             self.cola1.put(proceso)
             estado = "Atacando el planeta 1"
             self.procesador1.estado = estado

@@ -26,7 +26,7 @@ class Procesador(threading.Thread):
 	def usarProcesador(self,q):
         #mientras haya algo por ejecutar
 		while not self.proceso==None or not q.empty() or not self.lis.es_vacia() or not self.sus.es_vacia() or not self.blo.es_vacia() or self.minIter>0:
-			time.sleep(2.5) #tiempo para cada accion en el procesador
+			time.sleep(0.5) #tiempo para cada accion en el procesador
 			self.minIter-=1
 			if not q.empty():
 				nuevo=q.get()
