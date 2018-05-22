@@ -7,7 +7,7 @@ from Sonda import Sonda
 from robot import Robot
 
 class Proceso:
-    def __init__(self,idProceso,quantum,nombre,recurso,t,tr):
+    def __init__(self,idProceso,quantum,nombre,recurso,t,tr,ventana):
         self.idProceso = idProceso
         self.nombre=nombre
         self.recurso=recurso
@@ -19,6 +19,7 @@ class Proceso:
         self.lis=0
         self.zc=0
         self.estado=0  #0:listo ; 1:bloqueado ; 2:suspendido ; 3:ejecucion ; 4:terminado
+        self.ventana = ventana
     
     def __str__(self):
         return self.nombre+" "+str(self.idProceso)
@@ -27,39 +28,41 @@ class Proceso:
         self.quantum-=1
         self.t-=1
         self.zc+=1
-        self.recurso.animacion()
+        if self.estado == 3:
+            print("HOLA")
+            self.disparo.dibujar(self.ventana)
+            self.disparo.trayectoria()
+            pygame.display.update()
+        if self.estado == 1:
+            self.disparo.bloqueado()
+            self.disparo.dibujar(self.ventana)
+        if self.estado == 2:
+            self.disparo.dibujar(self.ventana)
         print("Preparando",self.nombre,self.idProceso,"quantum",self.quantum,"t",self.t,"recurso",self.recurso)
-    
+
 class ataque(Sprite,Proceso):
     
-    def __init__(self,idProceso,recurso,posX , posY,quantum=0,nombre="ataque planeta",t=8,tr=0):
-        Proceso.__init__(self,idProceso,quantum,nombre,recurso,t,tr)
+    def __init__(self,idProceso,recurso,posX ,ventana, posY,quantum=0,nombre="ataque planeta",t=8,tr=0,):
+        Proceso.__init__(self,idProceso,quantum,nombre,recurso,t,tr,ventana)
         Sprite.__init__(self)
-        self.disparoNave = Nave()
-        self.disparoNave.rect.top = posY
-        self.disparoNave.rect.left = posX
-        self.disparoNave.disparada = True
-
-    def ataqueBloqueado(self):
-        self.disparoNave.rect.top = 65
-        self.disparoNave.rect.left = 80
-
-    def ataqueSuspendido(self):
-        self.disparoNave.recttop = self.disparoNave.rect.top
+        self.disparo = Nave()
+        self.disparo.rect.top = posY
+        self.disparo.rect.left = posX
+        self.disparo.disparada = True
 
 class espiar(Sprite,Proceso):
     
     def __init__(self,idProceso,recurso,posX , posY,quantum=0,nombre="Espiar",t=5,tr=0):
         Proceso.__init__(self,idProceso,quantum,nombre,recurso,t,tr)
         Sprite.__init__(self)
-        self.disparoSonda = Sonda()
-        self.disparoSonda.rect.top = posY
-        self.disparoSonda.rect.left = posX
-        self.disparoSonda.disparada = True
+        self.disparo = Sonda()
+        self.disparo.rect.top = posY
+        self.disparo.rect.left = posX
+        self.disparo.disparada = True
     
     def espiarBloqueado(self):
-        self.disparoSonda.rect.top = 260
-        self.disparoSonda.rect.top = 80
+        self.disparo.rect.top = 260
+        self.disparo.rect.top = 80
     
     def espiasSuspendido(self):
         self.disparoSonda.rect.top = self.disparoSonda.rect.top

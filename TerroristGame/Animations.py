@@ -113,7 +113,7 @@ class SpaceAtack():
                     elif event.key == K_c:
                         x,y = self.jugador.rect.center
                         self.dispararRobots(x,y)
-            if len(listaNave)>0:
+            """if len(listaNave)>0:
                 #print("Tanano lista :",len(listaNave))
                 for x in listaNave:
                     #print("Numero de proceso :",x.idProceso," ",x.estado)
@@ -161,11 +161,6 @@ class SpaceAtack():
                         if x.disparoSonda.disparada:
                             x.espiasSuspendido()
                             x.disparoSonda.dibujar(self.ventana)
-                    """if x.disparada:
-                        x.dibujar(self.ventana)
-                        x.trayectoria()
-                    if x.rect.top < 100:
-                        x.disparada = False"""
             if len(listaRobots)>0:
                 for x in listaRobots:
                     if x.estado==3:
@@ -188,18 +183,12 @@ class SpaceAtack():
                         #print("Suspendido")
                         if x.disparoSonda.disparada:
                             x.reciclarSuspendido()
-                            x.disparoRobot.dibujar(self.ventana)
-                    """if x.disparada:
-                        x.dibujar(self.ventana)
-                        x.trayectoria()
-                    if x.rect.top < 100:
-                        x.disparada = False"""
+                            x.disparoRobot.dibujar(self.ventana)"""
             #print pygame.mouse.get_pos()
             pygame.display.update()
-    
 
     def dispararNave(self,posX , posY):
-        proceso = ataque(self.numeroAtaque,self.recursos[0],posX,posY)
+        proceso = ataque(self.numeroAtaque,self.recursos[0],posX,self.ventana,posY)
         self.numeroAtaque +=1
         if posX<=220:
             self.cola1.put(proceso)
@@ -216,7 +205,7 @@ class SpaceAtack():
         listaNave.append(proceso)
 
     def  dispararSonda(self,posX, posY):
-        proceso = espiar(self.numeroEspiar,self.recursos[1],posX,posY)
+        proceso = espiar(self.numeroEspiar,self.recursos[1],posX,posY,self.ventana)
         self.numeroEspiar +=1
         if posX<=220:
             self.cola1.put(proceso)
