@@ -123,6 +123,11 @@ class SpaceAtack():
             print pygame.mouse.get_pos()
             pygame.display.update()
     
+    def asignarQ(self, proceso):
+        
+         
+        return quantum
+
     def dispararNave(self,posX , posY):
         #proceso = ataque()
         disparoNave = Nave()

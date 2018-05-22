@@ -25,10 +25,6 @@ class Proceso:
         self.t-=1
         self.zc+=1
         print("Preparando",self.nombre,self.idProceso,"quantum",self.quantum,"t",self.t,"recurso",self.recurso)
-
-    def asignarQ(self,ttotal):
-        #Metodo de asignacion quantum para cada 
-        return 1
     
 class ataque(Sprite,Proceso):
     def __init__(self,idProceso,recurso,cont_size,quantum=0,nombre="ataque planeta",t=18,tr=0):
