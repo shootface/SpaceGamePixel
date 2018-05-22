@@ -19,3 +19,9 @@ class Sonda(Recursos,Sprite):
 
     def trayectoria(self):
         self.rect.top = self.rect.top - self.velocidad
+        if self.rect.top < 100:
+            self.disparada = False
+
+    def back(self):
+        self.rect.top = 719
+        print("BACK-----------------------------------------------------------------------------------")

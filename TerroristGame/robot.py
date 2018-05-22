@@ -19,3 +19,7 @@ class Robot(Recursos,Sprite):
 
     def trayectoria(self):
         self.rect.top = self.rect.top - self.velocidad
+
+    def back(self):
+        self.rect.top = 719
+        print("BACK-----------------------------------------------------------------------------------")
