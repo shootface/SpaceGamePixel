@@ -47,6 +47,7 @@ class Procesador(threading.Thread):
 					print("\nel proceso",posible.nombre,"requiere de un recurso ocupado, encolando en bloqueado")
 					self.blo.encolar(posible)
 					posible.estado=1
+					posible.bloqueado()
 
 			self.contarColaBlo()
 			self.contarColaLis()

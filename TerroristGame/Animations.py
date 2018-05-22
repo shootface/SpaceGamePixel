@@ -114,14 +114,20 @@ class SpaceAtack():
                 for x in listaNave:
                     if x.disparo.disparada:
                         x.disparo.dibujar(self.ventana)
+                    if x.disparo.bloqueada:
+                        x.disparo.dibujarBlo(self.ventana)
             if len(listaSondas)>0:
                 for x in listaSondas:
                     if x.disparo.disparada:
                         x.disparo.dibujar(self.ventana)
+                    if x.disparo.bloqueada:
+                        x.disparo.dibujarBlo(self.ventana)
             if len(listaRobots)>0:
                 for x in listaRobots:
                     if x.disparo.disparada:
                         x.disparo.dibujar(self.ventana)
+                    if x.disparo.bloqueada:
+                        x.disparo.dibujarBlo(self.ventana)
             #print pygame.mouse.get_pos()
             pygame.display.update()
 
