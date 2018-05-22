@@ -37,20 +37,24 @@ class SpaceAtack():
         self.planetas = [Planeta1(),Planeta2(),Planeta3()]#Todos los planetas se crean en esta lista
         self.asteroides = [asteroid(220,700),asteroid(630,700)]#Todos los asteroides se crean en esta lista 
         self.recursos = [Nave(),Sonda(),Robot()] #Todos los recursos se crean en una lista
-        self.velocidad = 8
+        self.velocidad = 12
 
+        #Colas donde se almacenan los procesos
         self.cola1 = Queue.Queue()
         self.cola2 = Queue.Queue()
         self.cola3 = Queue.Queue()
 
-        
+        #Definicion de procesadores
         self.procesador1 = Trayecto(1, self.cola1)
         self.procesador2 = Trayecto(2, self.cola2)
         self.procesador3 = Trayecto(3, self.cola3)
+
         #Variables de conteo para el  id del proceso 
         self.numeroAtaque = 0
         self.numeroEspiar = 0
         self.numeroReciclar = 0
+
+        #Variables que almacenan cada proceso que se crea demanera temporal
 
     def iniciar(self):
         self.hiloAnimacionEntradas = threading.Thread(name="animacion entradas", target = self.animacionEntradas)
@@ -129,26 +133,54 @@ class SpaceAtack():
         return quantum
 
     def dispararNave(self,posX , posY):
-        #proceso = ataque()
-        disparoNave = Nave()
-        disparoNave.rect.top = posY
-        disparoNave.rect.left = posX
-        disparoNave.disparada = True
-        listaNave.append(disparoNave)
+        proceso = ataque(self.numeroAtaque,self.recursos[0],posX,posY)
+        self.numeroAtaque +=1
+        if posX<=220:
+            self.cola1.put(proceso)
+            estado = "Atacando el planeta 1"
+            self.procesador1.estado = estado
+        elif posX>220 and posX <= 630:
+            self.cola2.put(proceso)
+            estado = "Atacando el planeta 2"
+            self.procesador2.estado = estado
+        elif posX > 630:
+            self.cola3.put(proceso)
+            estado = "Atacando el planeta 3"
+            self.procesador3.estado = estado
+        listaNave.append(proceso.disparoNave)
 
     def  dispararSonda(self,posX, posY):
-        disparoSonda = Sonda()
-        disparoSonda.rect.top = posY
-        disparoSonda.rect.left = posX
-        disparoSonda.disparada = True
-        listaSondas.append(disparoSonda)
+        proceso = espiar(self.numeroEspiar,self.recursos[1],posX,posY)
+        self.numeroEspiar +=1
+        if posX<=220:
+            self.cola1.put(proceso)
+            estado = "Espiando el planeta 1"
+            self.procesador1.estado = estado
+        elif posX>220 and posX <= 630:
+            self.cola2.put(proceso)
+            estado = "Espiando el planeta 2"
+            self.procesador2.estado = estado
+        elif posX > 630:
+            self.cola3.put(proceso)
+            estado = "Espiando el planeta 3"
+            self.procesador3.estado = estado
+        listaSondas.append(proceso.disparoSonda)
 
     def dispararRobots(self,posX,posY):
-        disparoRobot = Robot()
-        disparoRobot.rect.top = posY
-        disparoRobot.rect.left = posX
-        disparoRobot.disparada = True
-        listaRobots.append(disparoRobot)
+        proceso = reciclar(self.numeroReciclar,self.recursos[2],posX,posY)
+        if posX<=220:
+            self.cola1.put(proceso)
+            estado = "Reciclar el planeta 1"
+            self.procesador1.estado = estado
+        elif posX>220 and posX <= 630:
+            self.cola2.put(proceso)
+            estado = "Reciclar el planeta 2"
+            self.procesador2.estado = estado
+        elif posX > 630:
+            self.cola3.put(proceso)
+            estado = "Reciclar el planeta 3"
+            self.procesador3.estado = estado
+        listaRobots.append(proceso.disparoRobot)
 
 cliente = SpaceAtack()
 cliente.iniciar()

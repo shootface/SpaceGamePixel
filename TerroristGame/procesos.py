@@ -2,6 +2,9 @@ import threading
 import pygame
 from pygame.sprite import Sprite
 from pygame.locals import *
+from nave import Nave
+from Sonda import Sonda
+from robot import Robot
 
 class Proceso:
     def __init__(self,idProceso,quantum,nombre,recurso,t,tr):
@@ -27,17 +30,28 @@ class Proceso:
         print("Preparando",self.nombre,self.idProceso,"quantum",self.quantum,"t",self.t,"recurso",self.recurso)
     
 class ataque(Sprite,Proceso):
-    def __init__(self,idProceso,recurso,cont_size,quantum=0,nombre="ataque planeta",t=18,tr=0):
+    def __init__(self,idProceso,recurso,posX , posY,quantum=0,nombre="ataque planeta",t=18,tr=0):
         Proceso.__init__(self,idProceso,quantum,nombre,recurso,t,tr)
         Sprite.__init__(self)
-        self.cont_size = cont_size
+        self.disparoNave = Nave()
+        self.disparoNave.rect.top = posY
+        self.disparoNave.rect.left = posX
+        self.disparoNave.disparada = True
+
 class espiar(Sprite,Proceso):
-    def __init__(self,idProceso,recurso,cont_size,quantum=0,nombre="Espiar",t=10,tr=0):
+    def __init__(self,idProceso,recurso,posX , posY,quantum=0,nombre="Espiar",t=10,tr=0):
         Proceso.__init__(self,idProceso,quantum,nombre,recurso,t,tr)
         Sprite.__init__(self)
-        self.cont_size = cont_size
+        self.disparoSonda = Sonda()
+        self.disparoSonda.rect.top = posY
+        self.disparoSonda.rect.left = posX
+        self.disparoSonda.disparada = True
+
 class reciclar(Sprite,Proceso):
-    def __init__(self,idProceso,recurso,cont_size,quantum=0,nombre="reciclar escombros",t=30,tr=0):
+    def __init__(self,idProceso,recurso,posX , posY,quantum=0,nombre="reciclar escombros",t=30,tr=0):
         Proceso.__init__(self,idProceso,quantum,nombre,recurso,t,tr)
         Sprite.__init__(self)
-        self.cont_size = cont_size
+        self.disparoRobot = Robot()
+        self.disparoRobot.rect.top = posY
+        self.disparoRobot.rect.left = posX
+        self.disparoRobot.disparada = True
