@@ -119,22 +119,22 @@ class SpaceAtack():
                     #print("Numero de proceso :",x.idProceso," ",x.estado)
                     if x.estado==3:
                         if self.estadoAnterior==1:
-                            print("Etuve bloqueado")
+                            #print("Etuve bloqueado")
                             x.disparoNave.back()
                             self.estadoAnterior = 5
                         if x.disparoNave.disparada:
-                            print("En ejecucion")
+                            #print("En ejecucion")
                             #time.sleep(1) #tiempo para cada accion en el procesador
                             x.disparoNave.dibujar(self.ventana)
                             x.disparoNave.trayectoria()
                     if x.estado==1:
-                        print("Bloqueado")
+                        #print("Bloqueado")
                         self.estadoAnterior = 1
                         if x.disparoNave.disparada:
                             x.ataqueBloqueado()
                             x.disparoNave.dibujar(self.ventana)
                     if x.estado==2:
-                        print("Suspendido")
+                        #print("Suspendido")
                         if x.disparoNave.disparada:
                             x.ataqueSuspendido()
                             x.disparoNave.dibujar(self.ventana)
@@ -142,22 +142,22 @@ class SpaceAtack():
                 for x in listaSondas:
                     if x.estado==3:
                         if self.estadoAnteriorSonda==1:
-                            print("Etuve bloqueado")
+                            #print("Etuve bloqueado")
                             x.disparoSonda.back()
                             self.estadoAnterior = 5
                         if x.disparoSonda.disparada:
-                            print("En ejecucion")
+                            #print("En ejecucion")
                             #time.sleep(1) #tiempo para cada accion en el procesador
                             x.disparoSonda.dibujar(self.ventana)
                             x.disparoSonda.trayectoria()
                     if x.estado==1:
-                        print("Bloqueado")
+                        #print("Bloqueado")
                         self.estadoAnterior = 1
                         if x.disparoSonda.disparada:
                             x.espiarBloqueado()
                             x.disparoSonda.dibujar(self.ventana)
                     if x.estado==2:
-                        print("Suspendido")
+                        #print("Suspendido")
                         if x.disparoSonda.disparada:
                             x.espiasSuspendido()
                             x.disparoSonda.dibujar(self.ventana)
@@ -170,22 +170,22 @@ class SpaceAtack():
                 for x in listaRobots:
                     if x.estado==3:
                         if self.estadoAnteriorRobot==1:
-                            print("Etuve bloqueado")
+                            #print("Etuve bloqueado")
                             x.disparoRobot.back()
                             self.estadoAnterior = 5
                         if x.disparoRobot.disparada:
-                            print("En ejecucion")
+                            #print("En ejecucion")
                             #time.sleep(1) #tiempo para cada accion en el procesador
                             x.disparoRobot.dibujar(self.ventana)
                             x.disparoRobot.trayectoria()
                     if x.estado==1:
-                        print("Bloqueado")
+                        #print("Bloqueado")
                         self.estadoAnterior = 1
                         if x.disparoRobot.disparada:
                             x.reciclarBloqueado()
                             x.disparoRobot.dibujar(self.ventana)
                     if x.estado==2:
-                        print("Suspendido")
+                        #print("Suspendido")
                         if x.disparoSonda.disparada:
                             x.reciclarSuspendido()
                             x.disparoRobot.dibujar(self.ventana)

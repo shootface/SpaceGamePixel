@@ -27,6 +27,7 @@ class Proceso:
         self.quantum-=1
         self.t-=1
         self.zc+=1
+        self.recurso.animacion()
         print("Preparando",self.nombre,self.idProceso,"quantum",self.quantum,"t",self.t,"recurso",self.recurso)
     
 class ataque(Sprite,Proceso):

@@ -5,17 +5,24 @@ class Quantum ():
     def __init__(self):
         self.lisProcesos1 = list()
     
-    def actualizarValores(self, colaLis):
+    def actualizarValores(self, colaLis, colaQ):
+        self.lisProcesos1 = list()
         colaLisCopy = copy.deepcopy(colaLis) 
+        colaQCopy = list(colaQ.queue)
         tam = colaLisCopy.tam
+        print 'el tamano de cola lis es ', tam
+        print 'el tamano de colaq es' , len(colaQCopy)
 
         for i in range(tam):
             n = colaLisCopy.desencolar()
             self.lisProcesos1.append(n)
 
+        for pro in colaQCopy:
+            self.lisProcesos1.append(pro)
 
-    def asignarQ(self, proceso, cola):
-        self.actualizarValores(cola)
+    def asignarQ(self, proceso, colaLis, colaQ):
+        self.actualizarValores(colaLis, colaQ)
+        print ("se tienen" , len(self.lisProcesos1), "procesos en total")
         mean = 0
         mediana = 0
         if len(self.lisProcesos1) != 0:
@@ -35,6 +42,10 @@ class Quantum ():
             mean = mean / len(self.lisProcesos1)
 
             quantum = (mean + mediana)/2
+            
+            if(quantum>proceso.t):
+                quantum = quantum - proceso.t
+
             return quantum
         else:
             return 15
