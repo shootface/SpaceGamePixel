@@ -39,7 +39,7 @@ class SpaceAtack():
         self.planetas = [Planeta1(),Planeta2(),Planeta3()]#Todos los planetas se crean en esta lista
         self.asteroides = [asteroid(220,700),asteroid(630,700)]#Todos los asteroides se crean en esta lista 
         self.recursos = [pilot(),spy(),Mechanic()] #Todos los recursos se crean en una lista
-        self.velocidad = 50
+        self.velocidad = 100
 
         #Colas donde se almacenan los procesos
         self.cola1 = Queue.Queue()

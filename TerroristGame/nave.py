@@ -17,10 +17,6 @@ class Nave(Sprite):
         #print("TOP : ",self.rect.top)
         if self.rect.top < 100:
             self.disparada = False
-    
-    def back(self):
-        self.rect.top = 719
-        print("BACK-----------------------------------------------------------------------------------")
 
     def dibujar(self, ventana):
         ventana.blit(self.image,self.rect)
