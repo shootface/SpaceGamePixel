@@ -9,11 +9,11 @@ from principal import Principal
 from Planeta1 import Planeta1
 from planeta2 import Planeta2
 from planeta3 import Planeta3
-from nave import Nave
-from Sonda import Sonda
-from robot import Robot
 from asteroid import asteroid
 from procesos import *
+from pilot import pilot
+from mechanic import Mechanic
+from spy import spy
 
 listaNave = []
 listaSondas = []
@@ -36,8 +36,8 @@ class SpaceAtack():
         self.jugador = Principal()
         self.planetas = [Planeta1(),Planeta2(),Planeta3()]#Todos los planetas se crean en esta lista
         self.asteroides = [asteroid(220,700),asteroid(630,700)]#Todos los asteroides se crean en esta lista 
-        self.recursos = [Nave(),Sonda(),Robot()] #Todos los recursos se crean en una lista
-        self.velocidad = 12
+        self.recursos = [pilot(),spy(),Mechanic()] #Todos los recursos se crean en una lista
+        self.velocidad = 50
 
         #Colas donde se almacenan los procesos
         self.cola1 = Queue.Queue()
@@ -108,12 +108,19 @@ class SpaceAtack():
                         x,y = self.jugador.rect.center
                         self.dispararRobots(x,y)
             if len(listaNave)>0:
+                print("Tanano lista :",len(listaNave))
                 for x in listaNave:
-                    if x.disparada:
-                        x.dibujar(self.ventana)
-                        x.trayectoria()
-                    if x.rect.top < 100:
-                        x.disparada = False
+                    print("Numero de proceso :",x.idProceso)
+                    if x.estado==0:
+                        if x.disparoNave.disparada:
+                            print("Estado 0 ")
+                            x.disparoNave.dibujar(self.ventana)
+                            x.disparoNave.trayectoria()
+                    if x.estado==1:
+                        if x.disparoNave.disparada:
+                            print("Estado 1")
+                            x.ataqueSuspendido()
+                            x.disparoNave.dibujar(self.ventana)
             if len(listaSondas)>0:
                 for x in listaSondas:
                     if x.disparada:
@@ -204,7 +211,7 @@ class SpaceAtack():
             self.cola3.put(proceso)
             estado = "Atacando el planeta 3"
             self.procesador3.estado = estado
-        listaNave.append(proceso.disparoNave)
+        listaNave.append(proceso)
 
     def  dispararSonda(self,posX, posY):
         proceso = espiar(self.numeroEspiar,self.recursos[1],posX,posY)
@@ -227,7 +234,7 @@ class SpaceAtack():
             self.cola3.put(proceso)
             estado = "Espiando el planeta 3"
             self.procesador3.estado = estado
-        listaSondas.append(proceso.disparoSonda)
+        listaSondas.append(proceso)
 
     def dispararRobots(self,posX,posY):
         proceso = reciclar(self.numeroReciclar,self.recursos[2],posX,posY)
@@ -249,7 +256,7 @@ class SpaceAtack():
             self.cola3.put(proceso)
             estado = "Reciclar el planeta 3"
             self.procesador3.estado = estado
-        listaRobots.append(proceso.disparoRobot)
+        listaRobots.append(proceso)
 
 cliente = SpaceAtack()
 cliente.iniciar()
