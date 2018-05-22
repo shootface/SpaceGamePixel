@@ -12,33 +12,15 @@ from planeta3 import Planeta3
 from nave import Nave
 from Sonda import Sonda
 from robot import Robot
+from asteroid import asteroid
+from procesos import *
 
 listaNave = []
 listaSondas = []
 listaRobots = []
 
-def dispararNave(posX , posY):
-    disparoNave = Nave()
-    disparoNave.rect.top = posY
-    disparoNave.rect.left = posX
-    disparoNave.disparada = True
-    listaNave.append(disparoNave)
-
-def  dispararSonda(posX, posY):
-    disparoSonda = Sonda()
-    disparoSonda.rect.top = posY
-    disparoSonda.rect.left = posX
-    disparoSonda.disparada = True
-    listaSondas.append(disparoSonda)
-
-def dispararRobots(posX,posY):
-    disparoRobot = Robot()
-    disparoRobot.rect.top = posY
-    disparoRobot.rect.left = posX
-    disparoRobot.disparada = True
-    listaRobots.append(disparoRobot)
-
 class SpaceAtack():
+    
     def __init__(self):
         pygame.init()
         #Tamano de la ventana
@@ -52,7 +34,8 @@ class SpaceAtack():
         self.NEGRO = (0, 0, 0)
         #Jugardor principal
         self.jugador = Principal()
-        self.planetas = [Planeta1(),Planeta2(),Planeta3()]
+        self.planetas = [Planeta1(),Planeta2(),Planeta3()]#Todos los planetas se crean en esta lista
+        self.asteroides = [asteroid(220,700),asteroid(630,700)]#Todos los asteroides se crean en esta lista 
         self.recursos = [Nave(),Sonda(),Robot()] #Todos los recursos se crean en una lista
         self.velocidad = 8
 
@@ -64,6 +47,10 @@ class SpaceAtack():
         self.procesador1 = Trayecto(1, self.cola1)
         self.procesador2 = Trayecto(2, self.cola2)
         self.procesador3 = Trayecto(3, self.cola3)
+        #Variables de conteo para el  id del proceso 
+        self.numeroAtaque = 0
+        self.numeroEspiar = 0
+        self.numeroReciclar = 0
 
     def iniciar(self):
         self.hiloAnimacionEntradas = threading.Thread(name="animacion entradas", target = self.animacionEntradas)
@@ -86,6 +73,8 @@ class SpaceAtack():
                 r.dibujar_Recurso(self.ventana) #Se recorre la lista para dibuajr los recursos en el lateral de la ventana
             for p in self.planetas:
                 p.dibujar(self.ventana)
+            for a in self.asteroides:
+                a.dibujar(self.ventana)
 
             for event in pygame.event.get():
                 if event.type == K_p:
@@ -103,13 +92,13 @@ class SpaceAtack():
                         self.jugador.mover(self.jugador.get_posX()+self.velocidad)
                     elif event.key == K_z:
                         x,y = self.jugador.rect.center
-                        dispararNave(x,y)
+                        self.dispararNave(x,y)
                     elif event.key == K_x:
                         x,y = self.jugador.rect.center
-                        dispararSonda(x,y)
+                        self.dispararSonda(x,y)
                     elif event.key == K_c:
                         x,y = self.jugador.rect.center
-                        dispararRobots(x,y)
+                        self.dispararRobots(x,y)
             if len(listaNave)>0:
                 for x in listaNave:
                     if x.disparada:
@@ -133,6 +122,28 @@ class SpaceAtack():
                         x.disparada = False
             print pygame.mouse.get_pos()
             pygame.display.update()
+    
+    def dispararNave(self,posX , posY):
+        #proceso = ataque()
+        disparoNave = Nave()
+        disparoNave.rect.top = posY
+        disparoNave.rect.left = posX
+        disparoNave.disparada = True
+        listaNave.append(disparoNave)
+
+    def  dispararSonda(self,posX, posY):
+        disparoSonda = Sonda()
+        disparoSonda.rect.top = posY
+        disparoSonda.rect.left = posX
+        disparoSonda.disparada = True
+        listaSondas.append(disparoSonda)
+
+    def dispararRobots(self,posX,posY):
+        disparoRobot = Robot()
+        disparoRobot.rect.top = posY
+        disparoRobot.rect.left = posX
+        disparoRobot.disparada = True
+        listaRobots.append(disparoRobot)
 
 cliente = SpaceAtack()
 cliente.iniciar()
