@@ -30,7 +30,7 @@ class Procesador(threading.Thread):
 			self.minIter-=1
 			if not q.empty():
 				nuevo=q.get()
-				self.asignar(nuevo)
+				#self.asignar(nuevo)
 				self.ttotal+=nuevo.t
 			if not self.lis.es_vacia() and self.proceso==None:
 				posible=self.lis.desencolar()
