@@ -8,18 +8,15 @@ class SpaceAtackIntro():
     
     def __init__(self):
         pygame.init()
-        self.ventana = pygame.display.set_mode((1000,800))
+        self.ventana = pygame.display.set_mode((498,498))
         self.espacio = espacio()
 
     def inciar(self):
         self.espacio.cargarImagenes()
-        inicio = True
-        cont = 0
-        while inicio:
-            self.espacio.dibujar(self.ventana)
-            cont+=1
-            if cont == 73:
-                inicio = False
+        self.espacio.dibujar(self.ventana)
+
+        juego = SpaceAtack()
+        juego.iniciar()
 
 class espacio(Sprite):
     def __init__(self,posX=0,posY=0,nombre="espacio"):
