@@ -27,6 +27,7 @@ class SpaceAtack():
         pygame.init()
         #Tamano de la ventana
         self.ventana = pygame.display.set_mode((1000,800))
+
         #Nombre de la ventana
         pygame.display.set_caption("SpaceAtack")
         #Fondo
@@ -61,7 +62,8 @@ class SpaceAtack():
         self.numeroReciclar = 0
 
         #objeto quantum
-    def iniciar(self):
+    def iniciar(self):            
+
         self.hiloAnimacionEntradas = threading.Thread(name="animacion entradas", target = self.animacionEntradas)
         self.hiloAnimacionEntradas.setDaemon(True)
 
@@ -180,6 +182,3 @@ class SpaceAtack():
             estado = "Reciclar el planeta 3"
             self.procesador3.estado = estado
         listaRobots.append(proceso)
-
-cliente = SpaceAtack()
-cliente.iniciar()
