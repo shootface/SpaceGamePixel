@@ -15,7 +15,8 @@ class Sonda(Recursos,Sprite):
         self.rect = self.image.get_rect()
         self.velocidad = 150
         self.disparada = False  
-        self.bloqueada = False      
+        self.bloqueada = False
+        self.suspendida = False      
 
     def dibujar(self,ventana):
         ventana.blit(self.image,self.rect)

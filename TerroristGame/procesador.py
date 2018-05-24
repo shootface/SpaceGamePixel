@@ -64,6 +64,7 @@ class Procesador(threading.Thread):
 					self.proceso.recurso.libre=True
 					self.sus.encolar(self.proceso)
 					self.proceso.estado=2
+					self.proceso.suspendido()
 					print("\nse reencolo el proceso",self.proceso,"a suspendidos")
 					self.proceso=None
 				elif self.proceso.t==0: #si el proceso ya termino se despacha
