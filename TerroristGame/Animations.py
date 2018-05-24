@@ -130,7 +130,7 @@ class SpaceAtack():
                         x.disparo.dibujar(self.ventana)
                     if x.disparo.bloqueada:
                         x.disparo.dibujarBlo(self.ventana)
-                    if x.disparo.suspendid
+                    if x.disparo.suspendida:
                         x.disparo.dibujarSu(self.ventana)
             if len(listaRobots)>0:
                 for x in listaRobots:
