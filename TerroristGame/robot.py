@@ -10,12 +10,14 @@ class Robot(Recursos,Sprite):
         BLANCO = (255, 255, 255)
         self.image = pygame.image.load("Space/robot.png").convert()
         self.imageSu = pygame.image.load("Space/robotSu.png").convert()
+        self.imageSu.set_colorkey((0,0,0))
         self.imageBlo = pygame.image.load("Space/robotBlo.png").convert()
         self.image.set_colorkey(BLANCO)
         self.rect = self.image.get_rect()
         self.velocidad = 59
         self.disparada = False
-        self.bloqueada = False   
+        self.bloqueada = False
+        self.suspendida = False   
 
     def dibujar(self,ventana):
         ventana.blit(self.image,self.rect)

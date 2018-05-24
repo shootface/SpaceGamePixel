@@ -11,6 +11,7 @@ from Planeta1 import Planeta1
 from planeta2 import Planeta2
 from planeta3 import Planeta3
 from asteroid import asteroid
+from Explocion import explocion
 from procesos import *
 from pilot import pilot
 from mechanic import Mechanic
@@ -78,7 +79,10 @@ class SpaceAtack():
         while True:
             self.ventana.blit(self.Space_imageBackground,(0,0))
             for r in self.recursos:
-                r.dibujar_Recurso(self.ventana) #Se recorre la lista para dibuajr los recursos en el lateral de la ventana
+                if r.libre:
+                    r.dibujar_Recurso(self.ventana) #Se recorre la lista para dibuajr los recursos en el lateral de la ventana
+                else:
+                    r.dibujar_Recurso_Uso(self.ventana)
             for p in self.planetas:
                 p.dibujar(self.ventana)
             for a in self.asteroides:
@@ -116,18 +120,24 @@ class SpaceAtack():
                         x.disparo.dibujar(self.ventana)
                     if x.disparo.bloqueada:
                         x.disparo.dibujarBlo(self.ventana)
+                    if x.disparo.suspendida:
+                        x.disparo.dibujarSu(self.ventana)
             if len(listaSondas)>0:
                 for x in listaSondas:
                     if x.disparo.disparada:
                         x.disparo.dibujar(self.ventana)
                     if x.disparo.bloqueada:
                         x.disparo.dibujarBlo(self.ventana)
+                    if x.disparo.suspendida:
+                        x.disparo.dibujarSu(self.ventana)
             if len(listaRobots)>0:
                 for x in listaRobots:
                     if x.disparo.disparada:
                         x.disparo.dibujar(self.ventana)
                     if x.disparo.bloqueada:
                         x.disparo.dibujarBlo(self.ventana)
+                    if x.disparo.suspendida:
+                        x.disparo.dibujarSu(self.ventana)
             #print pygame.mouse.get_pos()
             pygame.display.update()
 

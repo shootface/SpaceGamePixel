@@ -31,12 +31,14 @@ class Proceso:
         if self.estado == 3:
             self.disparo.trayectoria()
             self.disparo.bloqueada = False
-        if self.estado == 2:
-            self.disparo.dibujarSu(self.ventana)
+            self.disparo.suspendida = False
         print("Preparando",self.nombre,self.idProceso,"quantum",self.quantum,"t",self.t,"recurso",self.recurso)
     def bloqueado(self):
         print("Bloqueado")
         self.disparo.bloqueada = True
+    def suspendido(self):
+        print("Suspendido")
+        self.disparo.suspendida = True
 
 class ataque(Sprite,Proceso):
     
