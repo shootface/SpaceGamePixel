@@ -46,7 +46,7 @@ class Quantum ():
 
             quantum = (mean + mediana)/2
 
-            if quantum > proceso.t :
+            if quantum >= proceso.t :
                 quantum = int(quantum - 0.45*proceso.t)-1
 
             #print "el quantum es ", quantum, "el tiempo del proceso es", proceso.t
