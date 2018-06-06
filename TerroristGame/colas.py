@@ -42,3 +42,11 @@ class Cola:
     
     def es_vacia(self):
         return self.cabeza==None
+
+    def ordenar(self):
+        a=[]
+        for i in range(self.tam):
+            a.append(self.desencolar())
+        a.sort(key=lambda procesos: procesos.t)
+        for i in a:
+            self.encolar(i)

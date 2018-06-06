@@ -99,8 +99,17 @@ class SpaceAtack():
                         hilo.exit()
                     sys.exit()
                 elif event.type == pygame.KEYDOWN:
+                    mod_bitmask = pygame.key.get_mods()
+                    if mod_bitmask & pygame.KMOD_CTRL:
+                        prioridad=2
+                    elif mod_bitmask & pygame.KMOD_SHIFT:
+                        prioridad=0
+                    else:
+                        prioridad=1
                     if event.key == K_p:
                         pygame.quit()
+                        for hilo in self.hilos:
+                            hilo.exit()
                         sys.exit()
                     if event.key == K_LEFT:
                         self.jugador.mover(self.jugador.get_posX()-self.velocidad)
@@ -108,13 +117,13 @@ class SpaceAtack():
                         self.jugador.mover(self.jugador.get_posX()+self.velocidad)
                     elif event.key == K_z:
                         x,y = self.jugador.rect.center
-                        self.dispararNave(x,y)
+                        self.dispararNave(x,y,prioridad)
                     elif event.key == K_x:
                         x,y = self.jugador.rect.center
-                        self.dispararSonda(x,y)
+                        self.dispararSonda(x,y,prioridad)
                     elif event.key == K_c:
                         x,y = self.jugador.rect.center
-                        self.dispararRobots(x,y)
+                        self.dispararRobots(x,y,prioridad)
             if len(listaNave)>0:
                 #print("Tanano lista :",len(listaNave))
                 for x in listaNave:
@@ -143,8 +152,8 @@ class SpaceAtack():
             #print pygame.mouse.get_pos()
             pygame.display.update()
 
-    def dispararNave(self,posX , posY):
-        proceso = ataque(self.numeroAtaque,self.recursos[0],posX,self.ventana,posY)
+    def dispararNave(self,posX ,posY,prioridad):
+        proceso = ataque(self.numeroAtaque,prioridad,self.recursos[0],posX,self.ventana,posY)
         self.numeroAtaque +=1
         if posX<=220:
             self.cola1.put(proceso)
@@ -160,8 +169,8 @@ class SpaceAtack():
             self.procesador3.estado = estado
         listaNave.append(proceso)
 
-    def  dispararSonda(self,posX, posY):
-        proceso = espiar(self.numeroEspiar,self.recursos[1],posX,self.ventana,posY)
+    def  dispararSonda(self,posX, posY,prioridad):
+        proceso = espiar(self.numeroEspiar,prioridad,self.recursos[1],posX,self.ventana,posY)
         self.numeroEspiar +=1
         if posX<=220:
             self.cola1.put(proceso)
@@ -177,8 +186,8 @@ class SpaceAtack():
             self.procesador3.estado = estado
         listaSondas.append(proceso)
 
-    def dispararRobots(self,posX,posY):
-        proceso = reciclar(self.numeroReciclar,self.recursos[2],posX,self.ventana,posY)
+    def dispararRobots(self,posX,posY,prioridad):
+        proceso = reciclar(self.numeroReciclar,prioridad,self.recursos[2],posX,self.ventana,posY)
         if posX<=220:
             self.cola1.put(proceso)
             estado = "Reciclar el planeta 1"
