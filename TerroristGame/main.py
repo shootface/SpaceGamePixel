@@ -1,7 +1,7 @@
 import pygame
 from pygame.locals import *
 from pygame.sprite import Sprite
-from Animations import SpaceAtack
+from Animacion.Animations import SpaceAtack
 import time
 
 class SpaceAtackIntro():
@@ -12,8 +12,8 @@ class SpaceAtackIntro():
         self.espacio = espacio()
 
     def inciar(self):
-        self.espacio.cargarImagenes()
-        self.espacio.dibujar(self.ventana)
+        #self.espacio.cargarImagenes()
+        #self.espacio.dibujar(self.ventana)
 
         juego = SpaceAtack()
         juego.iniciar()

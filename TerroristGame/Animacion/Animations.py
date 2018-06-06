@@ -3,9 +3,9 @@ import sys
 import threading
 import Queue
 import time
-from trayecto import Trayecto
+from Logica.trayecto import Trayecto
 from pygame.locals import *
-from recursos import *
+from Logica.recursos import *
 from Sprite.principal import Principal
 from Sprite.Planeta1 import Planeta1
 from Sprite.planeta2 import Planeta2
@@ -15,7 +15,7 @@ from Sprite.Explocion import explocion
 from Sprite.mechanic import Mechanic
 from Sprite.spy import spy
 from Sprite.pilot import pilot
-from procesos import *
+from Logica.procesos import *
 import time
 
 listaNave = []
@@ -84,6 +84,7 @@ class SpaceAtack():
                 if r.libre:
                     r.dibujar_Recurso(self.ventana) #Se recorre la lista para dibuajr los recursos en el lateral de la ventana
                 else:
+                    print(r.nombre,"ESTA OCUPADO")
                     r.dibujar_Recurso_Uso(self.ventana)
             for p in self.planetas:
                 p.dibujar(self.ventana)

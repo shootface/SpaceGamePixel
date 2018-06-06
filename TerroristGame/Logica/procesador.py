@@ -80,29 +80,32 @@ class Procesador(threading.Thread):
 					self.lisMax.encolar(posible)
 
 			elif not self.lisMed.es_vacia() and self.proceso==None and self.susMax.es_vacia() and self.bloMax.es_vacia():
+				print("ENTRO A MEDIO")
 				posible=self.lisMed.desencolar()
 				print(posible)
 				if posible.recurso.libre:
 					print("entro a asignar de la lista de media prioridad")
 					self.ocupado=True
 					self.proceso=posible
+					print("Asigna el recuro USANDO")
 					self.proceso.recurso.utilizar()
 					self.proceso.estado=3
 				else:
 					self.bloMed.encolar(posible)
+					print("EN LISTA MEDIA ESTA BLOQUEANDO EL PROCESO")
 					posible.bloqueado()
 
 			elif not self.lisMed.es_vacia() and not self.proceso==None and self.susMax.es_vacia() and self.bloMax.es_vacia() and self.lisMax.es_vacia() and not self.proceso.prioridad==0:
 				posible=self.lisMed.desencolar()
-				print("entro.... posible",posible,"prioridad",posible.prioridad,"actual",self.proceso,"prioridad",self.proceso.prioridad)
+				#print("entro.... posible",posible,"prioridad",posible.prioridad,"actual",self.proceso,"prioridad",self.proceso.prioridad)
 				if self.proceso.t>posible.t and posible.recurso.libre and self.proceso.prioridad==posible.prioridad:
-					print("entro a asignar de la lista de media prioridad cuando habia algo de menor tiempo")
+					#print("entro a asignar de la lista de media prioridad cuando habia algo de menor tiempo")
 					self.proceso.suspendido()
 					self.susMin.encolar(self.proceso)
 					self.proceso=posible
 					self.proceso.recurso.utilizar()
 				elif posible.recurso.libre and self.proceso.prioridad>posible.prioridad:
-					print("entro a asignar de la lista de media prioridad cuando habia algo de menor prioridad")
+					#print("entro a asignar de la lista de media prioridad cuando habia algo de menor prioridad")
 					self.proceso.suspendido()
 					self.susMin.encolar(self.proceso)
 					self.proceso=posible
@@ -129,9 +132,10 @@ class Procesador(threading.Thread):
 			self.revisarColaBlo()
 
 			if not self.proceso==None:
+    				print("PREPARANDO PARA PROCESAR")
 				self.proceso.procesar()
 				self.ttotal-=1
-				print(self.proceso,"quantum",self.proceso.quantum)
+				#print(self.proceso,"quantum",self.proceso.quantum)
 				if self.proceso.prioridad==0 and self.proceso.t>0 and self.proceso.quantum==0:
 					self.susMax.encolar(self.proceso)
 					self.proceso.suspendido()

@@ -1,7 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 from pygame.locals import *
-from recursos import Recursos
+from Logica.recursos import Recursos
 
 class spy(Recursos,Sprite):
 

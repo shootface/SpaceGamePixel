@@ -21,15 +21,9 @@ class Nave(Sprite):
         
     def trayectoria(self):    
         self.rect.top = self.rect.top - self.velocidad
-        print("TOP : ",self.rect.top)
+        #print("TOP : ",self.rect.top)
         if self.rect.top < 100:
             self.disparada = False
-        """if self.rect.top < 100:
-            self.image = self.imageef
-            self.velocidad = 1
-            print("EXPLOTANDO")
-        if self.rect.top < 19:
-            self.disparada = False"""
 
 
     def dibujar(self, ventana):
