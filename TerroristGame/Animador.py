@@ -22,6 +22,8 @@ class espacio(Sprite):
     def __init__(self,posX=0,posY=0,nombre="espacio"):
         Sprite.__init__(self)
         self.images = list()
+        self.fuente1 = pygame.font.Font(None,70)
+        self.textoBienvenida = self.fuente1.render("SpaceAttack", 1, (255,255,255))
 
     def cargarImagenes(self):
         for i in range(73):
@@ -31,6 +33,7 @@ class espacio(Sprite):
     def dibujar(self,ventana):
         for j in range(73):
             ventana.blit(self.images[j],(0,0))
+            ventana.blit(self.textoBienvenida,(100,249))
             pygame.display.update()
             time.sleep(0.1)
 
