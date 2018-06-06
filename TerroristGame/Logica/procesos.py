@@ -2,9 +2,9 @@ import threading
 import pygame
 from pygame.sprite import Sprite
 from pygame.locals import *
-from nave import Nave
-from Sonda import Sonda
-from robot import Robot
+from Sprite.nave import Nave
+from Sprite.Sonda import Sonda
+from Sprite.robot import Robot
 
 class Proceso:
     def __init__(self,idProceso,prioridad,quantum,nombre,recurso,t,tr,ventana):

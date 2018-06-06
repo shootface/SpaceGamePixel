@@ -6,16 +6,16 @@ import time
 from trayecto import Trayecto
 from pygame.locals import *
 from recursos import *
-from principal import Principal
-from Planeta1 import Planeta1
-from planeta2 import Planeta2
-from planeta3 import Planeta3
-from asteroid import asteroid
-from Explocion import explocion
+from Sprite.principal import Principal
+from Sprite.Planeta1 import Planeta1
+from Sprite.planeta2 import Planeta2
+from Sprite.planeta3 import Planeta3
+from Sprite.asteroid import asteroid
+from Sprite.Explocion import explocion
+from Sprite.mechanic import Mechanic
+from Sprite.spy import spy
+from Sprite.pilot import pilot
 from procesos import *
-from pilot import pilot
-from mechanic import Mechanic
-from spy import spy
 import time
 
 listaNave = []
