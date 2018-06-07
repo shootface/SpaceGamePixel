@@ -9,6 +9,7 @@ class Recursos:
     def utilizar(self):
         if self.libre:
             print("Usando el",self.nombre)
+            self.libre = False
         else:
             print("el",self.nombre,"esta ocupado")
     def liberar(self):
