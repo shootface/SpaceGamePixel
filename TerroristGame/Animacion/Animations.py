@@ -70,7 +70,12 @@ class SpaceAtack():
 
         #Variables iniciales de posicionamiento
         self.posMin = [(1100,590),(1130,590),(1160,590),(1190,590),(1220,590),(1250,590),(1280,590),(1310,590),(1340,590),(1370,590)]
+        self.posMid = [(1100,331),(1130,331),(1160,331),(1190,331),(1220,331),(1250,331),(1280,331),(1310,331),(1340,331),(1370,331)]
+        self.posMax = [(1100,60),(1130,60),(1160,60),(1190,60),(1220,60),(1250,60),(1280,60),(1310,60),(1340,60),(1370,60)]
         self.boolposMin = [0,0,0,0,0,0,0,0,0,0]
+        self.boolposMid= [0,0,0,0,0,0,0,0,0,0]
+        self.boolposMax = [0,0,0,0,0,0,0,0,0,0]
+
     def iniciar(self):            
 
         self.hiloAnimacionEntradas = threading.Thread(name="animacion entradas", target = self.animacionEntradas)
@@ -161,12 +166,12 @@ class SpaceAtack():
                         x.disparo.dibujarBlo(self.ventana)
                     if x.disparo.suspendida:
                         x.disparo.dibujarSu(self.ventana)
-            #print pygame.mouse.get_pos()
+            print pygame.mouse.get_pos()
             pygame.display.update()
 
     def dispararNave(self,posX ,posY,prioridad):
         pos = self.dibujarPrioridad(prioridad)
-        print("POS ENVIADA",pos)
+        #print("POS ENVIADA",pos)
         proceso = ataque(self.numeroAtaque,prioridad,self.recursos[0],posX,self.ventana,posY,pos)
         self.numeroAtaque +=1
         if posX<=220:
@@ -221,7 +226,11 @@ class SpaceAtack():
         if prioridad==0:
             pass
         elif prioridad==1:
-            pass
+            print("PRIORIDAD 1")
+            for x in range(len(self.posMin)):
+                if self.boolposMid[x]==0:
+                    self.boolposMid[x]=1
+                    return self.posMid[x]
         elif prioridad==2:
             print("PRIORIDAD 2")
             for x in range(len(self.posMin)):
