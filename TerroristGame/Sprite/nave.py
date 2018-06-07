@@ -31,9 +31,6 @@ class Nave(Sprite):
         if self.rect.top < 100:
             self.disparada = False
         
-    def getPrioridad(self):
-        return self.priodidad
-
     def dibujar(self, ventana):
         ventana.blit(self.image,self.rect)
         ventana.blit(self.textoID,(self.rect.left-20,self.rect.top))

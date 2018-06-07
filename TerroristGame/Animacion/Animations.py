@@ -189,7 +189,8 @@ class SpaceAtack():
         listaNave.append(proceso)
 
     def  dispararSonda(self,posX, posY,prioridad):
-        proceso = espiar(self.numeroAtaque,prioridad,self.recursos[1],posX,self.ventana,posY)
+        pos = self.dibujarPrioridad(prioridad)
+        proceso = espiar(self.numeroAtaque,prioridad,self.recursos[1],posX,self.ventana,posY,pos)
         self.numeroAtaque +=1
         if posX<=220:
             self.cola1.put(proceso)
@@ -206,7 +207,8 @@ class SpaceAtack():
         listaSondas.append(proceso)
 
     def dispararRobots(self,posX,posY,prioridad):
-        proceso = reciclar(self.numeroAtaque,prioridad,self.recursos[2],posX,self.ventana,posY)
+        pos = self.dibujarPrioridad(prioridad)
+        proceso = reciclar(self.numeroAtaque,prioridad,self.recursos[2],posX,self.ventana,posY,pos)
         self.numeroAtaque +=1
         if posX<=220:
             self.cola1.put(proceso)
@@ -224,7 +226,11 @@ class SpaceAtack():
 
     def dibujarPrioridad(self,prioridad):
         if prioridad==0:
-            pass
+            print("PRIORIDAD 0")
+            for x in range(len(self.posMin)):
+                if self.boolposMax[x]==0:
+                    self.boolposMax[x]=1
+                    return self.posMax[x]
         elif prioridad==1:
             print("PRIORIDAD 1")
             for x in range(len(self.posMin)):
