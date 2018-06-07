@@ -61,10 +61,10 @@ class Proceso:
 
 class ataque(Sprite,Proceso):
     
-    def __init__(self,idProceso,prioridad,recurso,posX ,ventana, posY,quantum=0,nombre="ataque planeta",t=8,tr=0,):
+    def __init__(self,idProceso,prioridad,recurso,posX ,ventana, posY,pos,quantum=0,nombre="ataque planeta",t=8,tr=0,):
         Proceso.__init__(self,idProceso,prioridad,quantum,nombre,recurso,t,tr,ventana)
         Sprite.__init__(self)
-        self.disparo = Nave()
+        self.disparo = Nave(pos,prioridad,idProceso)
         self.disparo.rect.top = posY
         self.disparo.rect.left = posX
         self.disparo.disparada = True
@@ -74,7 +74,7 @@ class espiar(Sprite,Proceso):
     def __init__(self,idProceso,prioridad,recurso,posX ,ventana, posY,quantum=0,nombre="Espiar",t=5,tr=0):
         Proceso.__init__(self,idProceso,prioridad,quantum,nombre,recurso,t,tr,ventana)
         Sprite.__init__(self)
-        self.disparo = Sonda()
+        self.disparo = Sonda(prioridad,idProceso)
         self.disparo.rect.top = posY
         self.disparo.rect.left = posX
         self.disparo.disparada = True
@@ -84,7 +84,7 @@ class reciclar(Sprite,Proceso):
     def __init__(self,idProceso,prioridad,recurso,posX ,ventana, posY,quantum=0,nombre="reciclar escombros",t=12,tr=0):
         Proceso.__init__(self,idProceso,prioridad,quantum,nombre,recurso,t,tr,ventana)
         Sprite.__init__(self)
-        self.disparo = Robot()
+        self.disparo = Robot(prioridad,idProceso)
         self.disparo.rect.top = posY
         self.disparo.rect.left = posX
         self.disparo.disparada = True

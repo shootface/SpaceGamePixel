@@ -13,6 +13,7 @@ from Sprite.planeta3 import Planeta3
 from Sprite.asteroid import asteroid
 from Sprite.Explocion import explocion
 from Sprite.mechanic import Mechanic
+from Sprite.hangar import Hangar
 from Sprite.spy import spy
 from Sprite.pilot import pilot
 from Logica.procesos import *
@@ -27,7 +28,7 @@ class SpaceAtack():
     def __init__(self):
         pygame.init()
         #Tamano de la ventana
-        self.ventana = pygame.display.set_mode((1000,800))
+        self.ventana = pygame.display.set_mode((1420,800))
 
         #Nombre de la ventana
         pygame.display.set_caption("SpaceAtack")
@@ -36,11 +37,15 @@ class SpaceAtack():
         # Definimos algunos colores
         self.BLANCO = (255, 255, 255)
         self.NEGRO = (0, 0, 0)
+        self.ROJO = (255,0,0)
+        self.VERDE = (0,255,0)
+        self.AZUL = (0,0,255)
         #Jugardor principal
         self.jugador = Principal()
         self.planetas = [Planeta1(),Planeta2(),Planeta3()]#Todos los planetas se crean en esta lista
         self.asteroides = [asteroid(220,700),asteroid(630,700)]#Todos los asteroides se crean en esta lista 
         self.recursos = [pilot(),spy(),Mechanic()] #Todos los recursos se crean en una lista
+        self.hangares = [Hangar("prioridad MAX",1075,10,1068,0,self.ROJO),Hangar("prioridad MED",1075,277,1068,267,self.VERDE),Hangar("prioridad MIN",1075,543,1068,533,self.AZUL)]
         self.velocidad = 100
 
         #Colas donde se almacenan los procesos
@@ -48,6 +53,7 @@ class SpaceAtack():
         self.cola2 = Queue.Queue()
         self.cola3 = Queue.Queue()
 
+        #Almacenamiento de los procesos 
         self.lisProcesos1 = list()
         self.lisProcesos2 = list()
         self.lisProcesos3 = list()
@@ -62,7 +68,9 @@ class SpaceAtack():
         self.numeroEspiar = 0
         self.numeroReciclar = 0
 
-        #objeto quantum
+        #Variables iniciales de posicionamiento
+        self.posMin = [(1100,590),(1130,590),(1160,590),(1190,590),(1220,590),(1250,590),(1280,590),(1310,590),(1340,590),(1370,590)]
+        self.boolposMin = [0,0,0,0,0,0,0,0,0,0]
     def iniciar(self):            
 
         self.hiloAnimacionEntradas = threading.Thread(name="animacion entradas", target = self.animacionEntradas)
@@ -90,6 +98,8 @@ class SpaceAtack():
                 p.dibujar(self.ventana)
             for a in self.asteroides:
                 a.dibujar(self.ventana)
+            for h in self.hangares:
+                h.dibujar(self.ventana)
             
             self.jugador.dibujar(self.ventana)
 
@@ -134,6 +144,7 @@ class SpaceAtack():
                         x.disparo.dibujarBlo(self.ventana)
                     if x.disparo.suspendida:
                         x.disparo.dibujarSu(self.ventana)
+                    #self.dibujarPrioridad(x.disparo)
             if len(listaSondas)>0:
                 for x in listaSondas:
                     if x.disparo.disparada:
@@ -154,7 +165,9 @@ class SpaceAtack():
             pygame.display.update()
 
     def dispararNave(self,posX ,posY,prioridad):
-        proceso = ataque(self.numeroAtaque,prioridad,self.recursos[0],posX,self.ventana,posY)
+        pos = self.dibujarPrioridad(prioridad)
+        print("POS ENVIADA",pos)
+        proceso = ataque(self.numeroAtaque,prioridad,self.recursos[0],posX,self.ventana,posY,pos)
         self.numeroAtaque +=1
         if posX<=220:
             self.cola1.put(proceso)
@@ -171,8 +184,8 @@ class SpaceAtack():
         listaNave.append(proceso)
 
     def  dispararSonda(self,posX, posY,prioridad):
-        proceso = espiar(self.numeroEspiar,prioridad,self.recursos[1],posX,self.ventana,posY)
-        self.numeroEspiar +=1
+        proceso = espiar(self.numeroAtaque,prioridad,self.recursos[1],posX,self.ventana,posY)
+        self.numeroAtaque +=1
         if posX<=220:
             self.cola1.put(proceso)
             estado = "Espiando el planeta 1"
@@ -188,7 +201,8 @@ class SpaceAtack():
         listaSondas.append(proceso)
 
     def dispararRobots(self,posX,posY,prioridad):
-        proceso = reciclar(self.numeroReciclar,prioridad,self.recursos[2],posX,self.ventana,posY)
+        proceso = reciclar(self.numeroAtaque,prioridad,self.recursos[2],posX,self.ventana,posY)
+        self.numeroAtaque +=1
         if posX<=220:
             self.cola1.put(proceso)
             estado = "Reciclar el planeta 1"
@@ -202,3 +216,16 @@ class SpaceAtack():
             estado = "Reciclar el planeta 3"
             self.procesador3.estado = estado
         listaRobots.append(proceso)
+
+    def dibujarPrioridad(self,prioridad):
+        if prioridad==0:
+            pass
+        elif prioridad==1:
+            pass
+        elif prioridad==2:
+            print("PRIORIDAD 2")
+            for x in range(len(self.posMin)):
+                if self.boolposMin[x]==0:
+                    self.boolposMin[x]=1
+                    return self.posMin[x]
+            

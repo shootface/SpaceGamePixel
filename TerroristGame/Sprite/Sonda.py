@@ -5,12 +5,13 @@ from Logica.recursos import Recursos
 
 class Sonda(Recursos,Sprite):
 
-    def __init__(self,nombre="Sonda"):
+    def __init__(self,prioridad,id,nombre="Sonda"):
         BLANCO = (255, 255, 255)
         Sprite.__init__(self)
         self.image = pygame.image.load("Space/sonda.png").convert()
         self.imageSu = pygame.image.load("Space/sondaSu.png").convert()
         self.imageBlo = pygame.image.load("Space/sondaBlo.png").convert()
+        self.imageMini = pygame.image.load("Space/naveMini.png").convert()
         self.image.set_colorkey(BLANCO)
         self.rect = self.image.get_rect()
         self.velocidad = 150
